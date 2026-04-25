@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="en"><head><script>
+try{if(window.parent&&window.parent!==window){window.parent.promotekit_referral="1fd2949a-d22c-431b-92bf-02d4ad04ee24";window.parent.document.cookie="promotekit_referral=1fd2949a-d22c-431b-92bf-02d4ad04ee24;path=/;domain=.aura.build;max-age=31536000"}}catch(e){}
+// Force manual scroll restoration to prevent browser from keeping previous scroll position
+if ('scrollRestoration' in history) {
+history.scrollRestoration = 'manual';
+}
+// Ensure page always starts at the top
+window.addEventListener('pageshow', function() {
+window.scrollTo(0, 0);
+});
+window.addEventListener('load', function() {
+setTimeout(function() {
+window.scrollTo(0, 0);
+}, 10);
+});
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BODYMAKERS | Luxury Fitness</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<style>
+body {
+font-family: 'Manrope', sans-serif;
+background-color: #050505;
+color: #e5e5e5;
+overflow-x: hidden;
+}
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+width: 5px;
+}
+::-webkit-scrollbar-track {
+background: #000000;
+}
+::-webkit-scrollbar-thumb {
+background: #ea580c;
+}
+.hide-scrollbar::-webkit-scrollbar {
+display: none;
+}
+.hide-scrollbar {
+-ms-overflow-style: none;
+scrollbar-width: none;
+}
+/* BodyMakers Specific Styles */
+.text-stroke {
+-webkit-text-stroke: 1px rgba(255, 255, 255, 0.2);
+color: transparent;
+}
+.laser-grid {
+background-image:
+linear-gradient(rgba(234, 88, 12, 0.05) 1px, transparent 1px),
+linear-gradient(90deg, rgba(234, 88, 12, 0.05) 1px, transparent 1px);
+background-size: 80px 80px;
+}
+.glow-orange {
+box-shadow: 0 0 30px rgba(234, 88, 12, 0.2);
+}
+.glow-text {
+text-shadow: 0 0 20px rgba(234, 88, 12, 0.6);
+}
+/* Reveal Animation */
+.reveal-on-scroll {
+opacity: 0;
+transform: translateY(20px);
+transition: all 0.8s ease-out;
+}
+.reveal-visible {
+opacity: 1;
+transform: translateY(0);
+}
+/* Hero Logo Text Slide Animation */
+@keyframes slideInRight {
+0% {
+transform: translateX(-20%);
+opacity: 0;
+filter: blur(10px);
+}
+100% {
+transform: translateX(0);
+opacity: 1;
+filter: blur(0);
+}
+}
+.animate-logo-text {
+animation: slideInRight 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+animation-delay: 0.5s;
+opacity: 0;
+}
+.vertical-text {
+writing-mode: vertical-rl;
+text-orientation: mixed;
+transform: rotate(180deg);
+}
+/* Flip Card Styles */
+.flip-card {
+perspective: 1000px;
+}
+.flip-card-inner {
+position: relative;
+width: 100%;
+height: 100%;
+transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+transform-style: preserve-3d;
+}
+.flip-card:hover .flip-card-inner {
+transform: rotateY(180deg);
+}
+.flip-card-front, .flip-card-back {
+position: absolute;
+width: 100%;
+height: 100%;
+-webkit-backface-visibility: hidden;
+backface-visibility: hidden;
+top: 0;
+left: 0;
+}
+.flip-card-back {
+transform: rotateY(180deg);
+}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"></head>
+<body class="antialiased selection:bg-orange-900 selection:text-white bg-black">
+    
+    <!-- Left Sidebar Contact Button -->
+    <div class="fixed left-0 top-1/2 -translate-y-1/2 z-50 hidden lg:block">
+      <a href="tel:7879572000" class="vertical-text block bg-black border-y border-r border-orange-900/50 text-orange-600 text-xs font-semibold tracking-widest py-8 px-3 hover:bg-orange-600 hover:text-black hover:shadow-[0_0_30px_rgba(234,88,12,0.4)] transition-all duration-500 uppercase">
+        <div class="flex items-center gap-2">
+            Contact
+        </div>
+      </a>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed z-50 mix-blend-difference w-full border-white/5 border-b pt-4 pr-6 pb-4 pl-6 top-0 backdrop-blur-sm bg-black/20">
+      <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <!-- Navbar Logo -->
+        <a href="#" class="block w-40 md:w-56 z-50 relative">
+          <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/f5eb35ea-f505-4650-9c25-bb3a74eecb16_800w.jpg" alt="BodyMakers Logo" class="w-full h-auto object-contain invert grayscale contrast-125 mix-blend-screen">
+        </a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex gap-8 text-xs font-normal tracking-widest uppercase text-neutral-400">
+          <a href="#philosophy" class="hover:text-orange-600 transition-colors">Philosophy</a>
+          <a href="#integration" class="hover:text-orange-600 transition-colors">Biometrics</a>
+          
+          <a href="#schedule" class="hover:text-orange-600 transition-colors">Schedule</a>
+          <a href="#membership" class="hover:text-orange-600 transition-colors">Pricing</a>
+        </div>
+
+        <!-- CTAs & Tools -->
+        <div class="hidden md:flex items-center gap-6 reveal-on-scroll reveal-visible">
+          <!-- Language Toggle (Desktop) -->
+          <button onclick="toggleLanguage()" class="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer text-sm font-medium tracking-widest uppercase">
+            <span class="lang-btn-en text-white transition-colors">EN</span>
+            <span class="text-neutral-600 font-normal">/</span>
+            <span class="lang-btn-es text-neutral-500 hover:text-white transition-colors">ES</span>
+          </button>
+          
+          <a href="other-services.html" class="flex group gap-2 uppercase hover:bg-white/10 hover:text-white transition-all duration-500 items-center text-xs font-medium text-neutral-400 tracking-widest border-white/10 border pt-3 pr-6 pb-3 pl-6">Other Services</a>
+          <a href="#membership" class="flex group gap-2 uppercase hover:bg-orange-600 hover:text-black hover:border-orange-600 transition-all duration-500 text-xs font-medium text-neutral-300 tracking-widest border-orange-900/30 border pt-3 pr-6 pb-3 pl-6 items-center">Join Us</a>
+        </div>
+
+        <!-- Mobile Menu Toggle & Lang -->
+        <div class="md:hidden flex items-center gap-5 z-50 relative p-2 -mr-2">
+          <!-- Language Toggle (Mobile) -->
+          <button onclick="toggleLanguage()" class="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer text-sm font-medium tracking-widest uppercase">
+            <span class="lang-btn-en text-white transition-colors">EN</span>
+            <span class="text-neutral-600 font-normal">/</span>
+            <span class="lang-btn-es text-neutral-500 hover:text-white transition-colors">ES</span>
+          </button>
+          
+          <button id="mobile-menu-btn" class="text-white hover:text-orange-600 transition-colors flex items-center justify-center">
+            <iconify-icon icon="solar:hamburger-menu-linear" width="28"></iconify-icon>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay (Slide-in from right) -->
+    <div id="mobile-menu" class="fixed inset-0 bg-black/98 backdrop-blur-xl z-40 flex flex-col items-center justify-center gap-6 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] translate-x-full">
+      <a href="#philosophy" class="mobile-link text-xl font-medium tracking-widest uppercase text-neutral-300 hover:text-orange-600 transition-colors">Philosophy</a>
+      <a href="#integration" class="mobile-link text-xl font-medium tracking-widest uppercase text-neutral-300 hover:text-orange-600 transition-colors">Biometrics</a>
+      <a href="#schedule" class="mobile-link text-xl font-medium tracking-widest uppercase text-neutral-300 hover:text-orange-600 transition-colors">Schedule</a>
+      <a href="#membership" class="mobile-link text-xl font-medium tracking-widest uppercase text-neutral-300 hover:text-orange-600 transition-colors">Pricing</a>
+      <a href="other-services.html" class="mobile-link text-xl font-medium tracking-widest uppercase text-neutral-300 hover:text-orange-600 transition-colors">Other Services</a>
+      <a href="#membership" class="mobile-link mt-6 text-sm font-semibold tracking-widest uppercase text-black bg-orange-600 px-10 py-4 hover:bg-orange-500 transition-colors shadow-[0_0_20px_rgba(234,88,12,0.3)]">Join Us</a>
+    </div>
+
+    <!-- Hero Header -->
+    <header class="relative h-screen w-full flex items-center justify-center overflow-hidden bg-neutral-950">
+      <!-- Background Image -->
+      <div class="absolute inset-0 z-0 flex items-center justify-center">
+        <!-- Base Photo -->
+        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&amp;w=3840&amp;auto=format&amp;fit=crop" alt="BodyMakers Gym Background" class="absolute inset-0 w-full h-full object-cover grayscale brightness-[0.45] contrast-125 scale-105 animate-[pulse_10s_ease-in-out_infinite]">
+        
+        <!-- Gradients -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/20"></div>
+        <div class="bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-transparent via-transparent to-black absolute top-0 right-0 bottom-0 left-0"></div>
+      </div>
+
+      <!-- Hero Content -->
+      <div class="grid grid-cols-1 md:grid-cols-12 md:pb-32 w-full h-full max-w-7xl z-10 pr-6 pb-24 pl-6 relative gap-x-8 gap-y-8 items-end">
+        <div class="md:col-span-8">
+          <!-- Logo Animation Block -->
+          <div class="flex flex-col md:flex-row md:items-center gap-2 md:gap-6 mb-8 gap-x-2 gap-y-2">
+            <!-- Sliding Text -->
+            <div class="overflow-hidden py-2 pl-1 relative">
+              <h1 class="text-5xl sm:text-7xl md:text-9xl leading-none flex items-center font-bold tracking-tight animate-logo-text" style="color: transparent; -webkit-text-stroke-width: 2px; -webkit-text-stroke-color: rgb(234, 88, 12); filter: drop-shadow(rgba(234, 88, 12, 0.8) 0px 0px 15px) drop-shadow(rgba(234, 88, 12, 0.4) 0px 0px 30px)">Train Like the Elite</h1>
+            </div>
+          </div>
+
+          <p class="text-sm md:text-lg text-neutral-400 max-w-lg leading-relaxed border-l-2 border-orange-700 pl-6 reveal-on-scroll reveal-visible">
+            Luxury is not comfort. Luxury is the ability to withstand.
+            Welcome to the underground sanctuary of the elite.
+          </p>
+        </div>
+
+        <div class="md:col-span-4 flex flex-col gap-6 justify-end">
+          <div class="flex text-xs text-orange-600 font-mono gap-x-4 gap-y-4 items-center uppercase">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-600 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-orange-600"></span>
+            </span>
+            Capacity: 89% Booked
+          </div>
+          <div class="grid grid-cols-2 gap-px bg-white/5 border border-white/5">
+            <div class="bg-black/80 p-5 hover:bg-orange-950/30 transition-colors cursor-pointer group border-r border-white/5 reveal-on-scroll reveal-visible">
+              <span class="block text-2xl text-white font-normal tracking-tight mb-1">01</span>
+              <span class="text-xs uppercase tracking-widest text-neutral-500 group-hover:text-orange-500 transition-colors">
+                Strength
+              </span>
+            </div>
+            <div class="bg-black/80 p-5 hover:bg-orange-950/30 transition-colors cursor-pointer group reveal-on-scroll reveal-visible">
+              <span class="block text-2xl text-white font-normal tracking-tight mb-1">02</span>
+              <span class="text-xs uppercase tracking-widest text-neutral-500 group-hover:text-orange-500 transition-colors">
+                Conditioning
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="absolute bottom-0 left-1/2 -translate-x-1/2 flex flex-col items-center">
+        <div class="w-px h-16 bg-gradient-to-b from-transparent via-orange-600 to-transparent animate-pulse"></div>
+      </div>
+    </header>
+
+    <!-- Philosophy Section -->
+    <section class="overflow-hidden bg-black border-neutral-900 border-t pt-32 pb-32 relative" id="philosophy">
+      <div class="absolute inset-0 laser-grid opacity-10 pointer-events-none"></div>
+
+      <div class="z-10 max-w-7xl mr-auto ml-auto pr-6 pl-6 relative">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-12 gap-x-12 gap-y-12 items-center">
+          <!-- Typography Block -->
+          <div class="md:col-span-7">
+            <span class="inline-block text-orange-600 text-xs font-semibold tracking-widest mb-6 uppercase flex items-center gap-2">
+              <span class="w-4 h-px bg-orange-600"></span>
+              The Manifesto
+            </span>
+            <h2 class="text-4xl md:text-6xl font-medium text-white tracking-tight leading-tight mb-8 reveal-on-scroll uppercase">
+              We don't sell
+              <span class="text-neutral-700">fitness.</span>
+              <br>
+              We forge
+              <span class="text-orange-700">dominance.</span>
+            </h2>
+            <div class="space-y-8 text-neutral-400 text-sm md:text-lg font-light leading-relaxed max-w-2xl">
+              <p class="reveal-on-scroll">
+                The modern world makes you soft. It offers convenience at the
+                expense of performance. At BodyMakers, we remove the excess. 
+                No distractions. No mirrors. Only raw iron and the will to 
+                defeat gravity.
+              </p>
+              <p class="reveal-on-scroll">
+                Designed by brutalist architects and elite performance coaches, 
+                our facility is an asymmetrical landscape of challenge. Every 
+                angle, every shadow is calculated to focus your mind on the only 
+                thing that matters: Output.
+              </p>
+              <p class="reveal-on-scroll">
+                We believe in the purity of pain. Growth only happens at the 
+                point of resistance. BodyMakers is the anvil on which you 
+                reforge yourself – harder, sharper, unbreakable.
+              </p>
+            </div>
+
+            <div class="flex gap-10 mt-12 gap-x-10 gap-y-10 items-center">
+              <div class="flex flex-col border-l border-orange-900 pl-4">
+                <span class="text-3xl font-light text-white tracking-tight">2,200 <span class="text-orange-600 text-lg align-top">+</span></span>
+                <span class="text-xs uppercase text-neutral-500 tracking-wider mt-1">
+                  Elite Members
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Visual Void -->
+          <div class="md:col-span-5 relative h-full min-h-[500px]">
+            <div class="absolute inset-0 bg-neutral-900 border border-neutral-800/50 p-1 group reveal-on-scroll">
+              <div class="bg-center contrast-125 group-hover:opacity-80 transition-opacity duration-700 opacity-60 w-full h-full bg-[url(https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=1600&amp;q=80)] bg-cover grayscale brightness-75"></div>
+              <div class="absolute bottom-6 left-6 right-6 border-t border-orange-600 pt-4 bg-gradient-to-t from-black/90 to-transparent p-4">
+                <div class="flex cursor-pointer items-end justify-between" onclick="window.location.href='gallery.html'" role="button">
+                  <div class="">
+                    <span class="block text-white text-lg font-medium tracking-tight uppercase">
+                      Our Philosophy
+                    </span>
+                    <span class="text-xs font-mono text-orange-500 uppercase">
+                      Sector 04 // Free Weights
+                    </span>
+                  </div>
+                  <iconify-icon icon="solar:arrow-right-up-linear" class="group-hover:rotate-45 transition-transform duration-500 text-white" width="24" height="24" style="color: rgb(255, 255, 255)"></iconify-icon>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Animated Integrations / Biometrics Section -->
+    <section class="border-y overflow-hidden bg-neutral-950 border-neutral-900 pt-24 pb-24 relative" id="integration">
+      <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-orange-900/50 to-transparent"></div>
+
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+          <span class="inline-flex items-center gap-2 rounded-full bg-orange-950/20 px-4 py-1.5 text-xs text-orange-500 ring-1 ring-orange-900/30 uppercase tracking-widest mb-6 border border-orange-900/20 reveal-on-scroll">
+            <iconify-icon icon="solar:heart-pulse-linear" width="14"></iconify-icon>
+            Biometric Synchronization
+          </span>
+          <h2 class="text-4xl md:text-5xl font-medium text-white tracking-tight reveal-on-scroll uppercase">
+            Biometrics &amp;
+            <span class="text-neutral-600">Analysis</span>
+          </h2>
+          <p class="reveal-on-scroll text-sm text-neutral-400 max-w-xl mt-6 mr-auto ml-auto">Measure your body fat, muscle mass, and weight in seconds with our advanced body analysis machine—everything you need to track your progress in one place.</p>
+        </div>
+
+        <!-- Aligned Animation Component -->
+        <div class="relative mx-auto mt-12 md:mt-20 max-w-4xl w-full h-[250px] md:h-[300px]">
+            <!-- Icon 1 -->
+            <div class="absolute top-[13.33%] left-[21.11%] -translate-x-1/2 -translate-y-1/2 z-20">
+                <span class="inline-flex items-center justify-center bg-neutral-950 w-12 h-12 ring-white/10 ring-1 rounded-lg hover:ring-orange-600/40 transition-all duration-500 shadow-lg relative">
+                    <iconify-icon icon="solar:watch-square-linear" class="text-neutral-400" width="24"></iconify-icon>
+                </span>
+            </div>
+
+            <!-- Icon 2 -->
+            <div class="absolute top-[13.33%] left-[50%] -translate-x-1/2 -translate-y-1/2 z-20">
+                <span class="inline-flex items-center justify-center bg-neutral-950 w-12 h-12 ring-white/10 ring-1 rounded-lg hover:ring-orange-600/40 transition-all duration-500 shadow-lg relative">
+                    <iconify-icon icon="solar:smartphone-linear" class="text-neutral-400" width="24"></iconify-icon>
+                </span>
+            </div>
+
+            <!-- Icon 3 -->
+            <div class="absolute top-[13.33%] left-[78.89%] -translate-x-1/2 -translate-y-1/2 z-20">
+                <span class="inline-flex items-center justify-center bg-neutral-950 w-12 h-12 ring-white/10 ring-1 rounded-lg hover:ring-orange-600/40 transition-all duration-500 shadow-lg relative">
+                    <iconify-icon icon="solar:heart-pulse-linear" class="text-neutral-400" width="24"></iconify-icon>
+                </span>
+            </div>
+
+            <!-- SVG Lines Background -->
+            <svg viewBox="0 0 900 300" preserveAspectRatio="none" class="absolute inset-0 w-full h-full opacity-90" fill="none" stroke-width="2">
+              <defs>
+                <filter id="glow-orange" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="3" result="coloredBlur"></feGaussianBlur>
+                  <feMerge>
+                    <feMergeNode in="coloredBlur"></feMergeNode>
+                    <feMergeNode in="SourceGraphic"></feMergeNode>
+                  </feMerge>
+                </filter>
+              </defs>
+
+              <path d="M450 250 C 450 180, 250 120, 190 40" stroke="#ea580c" stroke-width="1.5" stroke-linecap="round" fill="none" stroke-dasharray="400" stroke-dashoffset="400" opacity="0.6">
+                <animate attributeName="stroke-dashoffset" values="400;0;400" dur="3s" repeatCount="indefinite" calcMode="spline" keySplines="0.42 0 0.58 1; 0.42 0 0.58 1"></animate>
+              </path>
+              <path d="M450 250 C 450 180, 450 120, 450 40" stroke="#ea580c" stroke-width="1.5" stroke-linecap="round" fill="none" stroke-dasharray="400" stroke-dashoffset="400" opacity="0.6">
+                <animate attributeName="stroke-dashoffset" values="400;0;400" dur="3s" begin="0.2s" repeatCount="indefinite" calcMode="spline" keySplines="0.42 0 0.58 1; 0.42 0 0.58 1"></animate>
+              </path>
+              <path d="M450 250 C 450 180, 650 120, 710 40" stroke="#ea580c" stroke-width="1.5" stroke-linecap="round" fill="none" stroke-dasharray="400" stroke-dashoffset="400" opacity="0.6">
+                <animate attributeName="stroke-dashoffset" values="400;0;400" dur="3s" begin="0.4s" repeatCount="indefinite" calcMode="spline" keySplines="0.42 0 0.58 1; 0.42 0 0.58 1"></animate>
+              </path>
+
+              <circle cx="190" cy="40" r="3" fill="#f97316" filter="url(#glow-orange)">
+                <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"></animate>
+              </circle>
+              <circle cx="450" cy="40" r="3" fill="#f97316" filter="url(#glow-orange)">
+                <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" begin="0.2s" repeatCount="indefinite"></animate>
+              </circle>
+              <circle cx="710" cy="40" r="3" fill="#f97316" filter="url(#glow-orange)">
+                <animate attributeName="opacity" values="0.4;1;0.4" dur="2s" begin="0.4s" repeatCount="indefinite"></animate>
+              </circle>
+            </svg>
+            
+            <!-- Bottom Icon: Central Hub -->
+            <div class="absolute top-[83.33%] left-[50%] -translate-x-1/2 -translate-y-1/2 z-20">
+              <span class="inline-flex items-center justify-center bg-neutral-950 w-20 h-20 border-orange-900/50 border rounded-2xl shadow-[0_0_50px_rgba(234,88,12,0.25)] relative">
+                <iconify-icon icon="solar:dumbbell-large-linear" class="text-orange-600 animate-pulse" width="32"></iconify-icon>
+              </span>
+            </div>
+        </div>
+
+        <!-- Features Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mt-12 md:mt-16 reveal-on-scroll">
+            <div class="bg-white/5 border border-white/5 p-6 hover:bg-white/10 hover:border-orange-900/50 transition-all duration-300">
+                <h4 class="uppercase flex items-center gap-2 text-xs font-semibold text-white tracking-widest mb-3"><iconify-icon icon="solar:dumbbell-large-linear" class="text-orange-500" width="18"></iconify-icon> Performance Training</h4>
+                <p class="leading-relaxed text-xs font-light text-neutral-500">Train with purpose using top-tier equipment designed to maximize strength, endurance, and results.</p>
+            </div>
+            <div class="hover:bg-white/10 hover:border-orange-900/50 transition-all duration-300 bg-white/5 border-white/5 border pt-6 pr-6 pb-6 pl-6">
+                <h4 class="uppercase flex items-center gap-2 text-xs font-semibold text-white tracking-widest mb-3"><iconify-icon icon="solar:users-group-rounded-linear" class="text-orange-500" width="18"></iconify-icon> Community Driven</h4><p class="leading-relaxed text-xs font-light text-neutral-500">Join a focused and supportive environment where everyone is committed to growth and consistency.</p>
+            </div>
+            <div class="hover:bg-white/10 hover:border-orange-900/50 transition-all duration-300 bg-white/5 border-white/5 border pt-6 pr-6 pb-6 pl-6">
+                <h4 class="uppercase flex items-center gap-2 text-xs font-semibold text-white tracking-widest mb-3"><iconify-icon icon="solar:clock-circle-linear" class="text-orange-500" width="18"></iconify-icon> Flexible hours</h4>
+                <p class="leading-relaxed text-xs font-light text-neutral-500">Train on your schedule with extended hours that fit your lifestyle.</p>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Goals / Gallery Section -->
+    <section class="bg-black pt-32 pb-32 relative">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-12 border-b border-white/10 pb-6">
+          <div class="">
+            <h3 class="text-3xl font-medium text-white tracking-tight uppercase reveal-on-scroll">
+              Goals &amp; Atmosphere
+            </h3>
+            <p class="text-neutral-500 text-sm mt-2 reveal-on-scroll">
+              Where shadow meets steel.
+            </p>
+          </div>
+          <a href="gallery.html" class="hover:text-white transition-colors uppercase md:mt-0 flex items-center gap-2 group reveal-on-scroll text-xs text-orange-600 tracking-widest mt-4">
+            Full Gallery
+            <iconify-icon icon="solar:arrow-right-linear" class="group-hover:translate-x-1 transition-transform" width="16"></iconify-icon>
+          </a>
+        </div>
+
+        <!-- Brutalist Grid Gallery (Mobile Responsive Fix) -->
+        <div class="flex flex-col md:grid md:grid-cols-4 md:grid-rows-2 gap-2 h-auto md:h-[650px]">
+          <!-- Large Item -->
+          <div class="min-h-[350px] md:min-h-0 md:h-full md:col-span-2 md:row-span-2 relative group overflow-hidden bg-neutral-900 reveal-on-scroll">
+            <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/570c773f-70b4-413c-bfca-b51932003fe7_1600w.jpg" class="transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0 group-hover:brightness-100 w-full h-full object-cover grayscale-0 brightness-90">
+            <div class="bg-gradient-to-t from-black via-transparent to-transparent opacity-90 absolute top-0 right-0 bottom-0 left-0"></div>
+            <div class="absolute bottom-8 left-8 border-l-2 border-orange-600 pl-4">
+              <h4 class="text-2xl text-white font-medium uppercase tracking-tight">
+                Free Weights Area
+              </h4>
+              <p class="text-xs text-neutral-400 mt-1 uppercase tracking-widest reveal-on-scroll">
+                Olympic Standard
+              </p>
+            </div>
+          </div>
+
+          <!-- Small Item 1 -->
+          <div class="min-h-[250px] md:min-h-0 md:h-full md:col-span-1 md:row-span-1 relative group overflow-hidden bg-neutral-900 reveal-on-scroll">
+            <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/819f79e8-9ebf-4a4a-abf6-3c76d58b9405_800w.jpg" class="transition-all duration-700 group-hover:scale-105 group-hover:brightness-100 bg-[conic-gradient(from_180deg,var(--tw-gradient-stops))] from-white/10 to-white/0 w-full h-full object-cover grayscale-0 brightness-75">
+            <div class="absolute top-4 right-4 text-orange-600 opacity-0 group-hover:opacity-100 transition-opacity">
+              <iconify-icon icon="solar:target-linear" width="20" class=""></iconify-icon>
+            </div>
+          </div>
+
+          <!-- Small Item 2 (Quote) -->
+          <div class="min-h-[250px] md:min-h-0 md:h-full md:col-span-1 md:row-span-1 bg-orange-950/10 border border-orange-900/20 p-8 flex flex-col justify-center items-start group hover:bg-orange-900/20 transition-colors relative overflow-hidden reveal-on-scroll">
+            <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
+            <div class="relative z-10 w-full">
+              <h4 class="text-orange-600 text-xs font-semibold uppercase tracking-widest mb-6 flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-orange-600 animate-pulse shadow-[0_0_8px_orange]"></span>
+                Our Goals
+              </h4>
+              <ul class="space-y-4 text-white text-sm font-normal tracking-wide uppercase">
+                <li class="flex items-center gap-3 border-b border-orange-900/20 pb-2">
+                  <iconify-icon icon="solar:dumbbell-large-linear" class="text-orange-600" width="14"></iconify-icon>
+                  Physical Dominance
+                </li>
+                <li class="flex items-center gap-3 border-b border-orange-900/20 pb-2">
+                  <iconify-icon icon="solar:brain-linear" class="text-orange-600" width="14"></iconify-icon>
+                  Mental Toughness
+                </li>
+                <li class="flex items-center gap-3 pb-2">
+                  <iconify-icon icon="solar:star-linear" class="text-orange-600" width="14"></iconify-icon>
+                  Aesthetic Perfection
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Wide Item -->
+          <div class="min-h-[300px] md:min-h-0 md:h-full md:col-span-2 md:row-span-1 relative group overflow-hidden bg-neutral-900 reveal-on-scroll">
+            <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/82e0ef55-768a-462a-b99a-465e2cc85341_1600w.jpg" class="transition-all duration-700 group-hover:scale-105 group-hover:grayscale-0 group-hover:brightness-100 w-full h-full object-cover grayscale-0 brightness-75">
+            <div class="bg-gradient-to-r from-black/80 to-transparent absolute top-0 right-0 bottom-0 left-0"></div>
+            <div class="absolute bottom-8 left-8">
+              <h4 class="text-xl text-white font-medium uppercase tracking-tight">
+                Cardio Theater
+              </h4>
+              <p class="text-xs text-neutral-400 mt-1 uppercase tracking-widest reveal-on-scroll">
+                Immersive Experience
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Schedule & Hours Section -->
+    <section id="schedule" class="pt-32 pb-32 bg-black border-t border-neutral-900 relative">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-end mb-16 border-b border-white/10 pb-6">
+          <div class="">
+            <h3 class="text-3xl font-medium text-white tracking-tight uppercase reveal-on-scroll">
+              Schedule &amp; Hours
+            </h3>
+            <p class="text-neutral-500 text-sm mt-2 reveal-on-scroll">
+              Discipline demands structure.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-24">
+          <!-- Gym Hours Card -->
+          <div class="bg-white/5 border border-white/5 hover:border-white/20 p-8 flex flex-col transition-all duration-300 reveal-on-scroll max-w-3xl mx-auto w-full">
+            <h4 class="text-orange-600 text-xs font-semibold uppercase tracking-widest mb-8 flex items-center gap-3">
+              <iconify-icon icon="solar:clock-circle-linear" width="18"></iconify-icon>
+              Facility Hours
+            </h4>
+            <ul class="space-y-5 text-sm">
+              <li class="flex justify-between items-end border-b border-white/5 pb-4">
+                <span class="text-white uppercase tracking-wide">Monday – Thursday</span>
+                <span class="text-neutral-400 font-mono">5:00 AM – 10:00 PM</span>
+              </li>
+              <li class="flex justify-between items-end border-b border-white/5 pb-4">
+                <span class="text-white uppercase tracking-wide">Friday</span>
+                <span class="text-neutral-400 font-mono">5:00 AM – 9:00 PM</span>
+              </li>
+              <li class="flex justify-between items-end border-b border-white/5 pb-4">
+                <span class="text-white uppercase tracking-wide">Saturday</span>
+                <span class="text-neutral-400 font-mono">8:00 AM – 4:00 PM</span>
+              </li>
+              
+            </ul>
+          </div>
+
+          <!-- Classes Schedule Grid Component -->
+          <div class="w-full">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-8 border-b border-white/10 pb-4 reveal-on-scroll">
+              <h4 class="text-orange-600 text-xs font-semibold uppercase tracking-widest flex items-center gap-3">
+                <iconify-icon icon="solar:calendar-linear" width="18"></iconify-icon>
+                Class Schedule
+              </h4>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+              
+              <!-- 1. Madd Reps -->
+              <div class="flip-card h-36 w-full cursor-pointer reveal-on-scroll group">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front bg-white/5 border border-white/5 p-6 flex flex-col justify-between group-hover:border-orange-900/50 group-hover:bg-white/10 transition-colors">
+                    <h5 class="text-white text-sm font-semibold uppercase tracking-widest leading-tight">Madd Reps</h5>
+                    <div class="flex flex-col mt-4 gap-1">
+                      <span class="text-xs text-neutral-500 uppercase tracking-widest">Monday</span>
+                      <span class="text-xs font-mono text-orange-500">8:00 AM</span>
+                    </div>
+                  </div>
+                  <div class="flip-card-back bg-black border border-orange-600/30 p-6 flex flex-col justify-center items-center shadow-[0_0_20px_rgba(234,88,12,0.1)]">
+                    <span class="text-xs text-orange-600 uppercase tracking-widest mb-2 font-mono">Coach</span>
+                    <h5 class="text-white text-sm font-medium uppercase tracking-widest text-center">Joyce Sánchez</h5>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 2. Spinning (Tuesday Morning) -->
+              <div class="flip-card h-36 w-full cursor-pointer reveal-on-scroll group">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front bg-white/5 border border-white/5 p-6 flex flex-col justify-between group-hover:border-orange-900/50 group-hover:bg-white/10 transition-colors">
+                    <h5 class="text-white text-sm font-semibold uppercase tracking-widest leading-tight">Spinning</h5>
+                    <div class="flex flex-col mt-4 gap-1">
+                      <span class="text-xs text-neutral-500 uppercase tracking-widest">Tuesday</span>
+                      <span class="text-xs font-mono text-orange-500">8:00 AM</span>
+                    </div>
+                  </div>
+                  <div class="flip-card-back bg-black border border-orange-600/30 p-6 flex flex-col justify-center items-center shadow-[0_0_20px_rgba(234,88,12,0.1)]">
+                    <span class="text-xs text-orange-600 uppercase tracking-widest mb-2 font-mono">Coach</span>
+                    <h5 class="text-white text-sm font-medium uppercase tracking-widest text-center">Joyce Sánchez</h5>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 3. Kickboxing -->
+              <div class="flip-card h-36 w-full cursor-pointer reveal-on-scroll group">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front bg-white/5 border border-white/5 p-6 flex flex-col justify-between group-hover:border-orange-900/50 group-hover:bg-white/10 transition-colors">
+                    <h5 class="text-white text-sm font-semibold uppercase tracking-widest leading-tight">Kickboxing</h5>
+                    <div class="flex flex-col mt-4 gap-1">
+                      <span class="text-xs text-neutral-500 uppercase tracking-widest">Monday</span>
+                      <span class="text-xs font-mono text-orange-500">6:30 PM</span>
+                    </div>
+                  </div>
+                  <div class="flip-card-back bg-black border border-orange-600/30 p-6 flex flex-col justify-center items-center shadow-[0_0_20px_rgba(234,88,12,0.1)]">
+                    <span class="text-xs text-orange-600 uppercase tracking-widest mb-2 font-mono">Coach</span>
+                    <h5 class="text-white text-sm font-medium uppercase tracking-widest text-center">Yamiraliz Flores</h5>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 4. Spinning (Evening multi-day) -->
+              <div class="flip-card h-36 w-full cursor-pointer reveal-on-scroll group">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front bg-white/5 border border-white/5 p-6 flex flex-col justify-between group-hover:border-orange-900/50 group-hover:bg-white/10 transition-colors">
+                    <h5 class="text-white text-sm font-semibold uppercase tracking-widest leading-tight">Spinning</h5>
+                    <div class="flex flex-col mt-4 gap-1">
+                      <span class="text-xs text-neutral-500 uppercase tracking-widest">Mon / Tue / Thu</span>
+                      <span class="text-xs font-mono text-orange-500">6:30 PM</span>
+                    </div>
+                  </div>
+                  <div class="flip-card-back bg-black border border-orange-600/30 p-6 flex flex-col justify-center items-center shadow-[0_0_20px_rgba(234,88,12,0.1)]">
+                    <span class="text-xs text-orange-600 uppercase tracking-widest mb-2 font-mono">Coach</span>
+                    <h5 class="uppercase text-sm font-medium text-white tracking-widest text-center">Nancy Peharpre</h5>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 5. ABS Class -->
+              <div class="flip-card h-36 w-full cursor-pointer reveal-on-scroll group">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front bg-white/5 border border-white/5 p-6 flex flex-col justify-between group-hover:border-orange-900/50 group-hover:bg-white/10 transition-colors">
+                    <h5 class="text-white text-sm font-semibold uppercase tracking-widest leading-tight">ABS Class</h5>
+                    <div class="flex flex-col mt-4 gap-1">
+                      <span class="text-xs text-neutral-500 uppercase tracking-widest">Tuesday</span>
+                      <span class="text-xs font-mono text-orange-500">5:30 PM</span>
+                    </div>
+                  </div>
+                  <div class="flip-card-back bg-black border border-orange-600/30 p-6 flex flex-col justify-center items-center shadow-[0_0_20px_rgba(234,88,12,0.1)]">
+                    <span class="text-xs text-orange-600 uppercase tracking-widest mb-2 font-mono">Coach</span>
+                    <h5 class="text-white text-sm font-medium uppercase tracking-widest text-center">Yamiraliz Flores</h5>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 6. Zumba (Tuesday) -->
+              <div class="flip-card h-36 w-full cursor-pointer reveal-on-scroll group">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front bg-white/5 border border-white/5 p-6 flex flex-col justify-between group-hover:border-orange-900/50 group-hover:bg-white/10 transition-colors">
+                    <h5 class="text-white text-sm font-semibold uppercase tracking-widest leading-tight">Zumba</h5>
+                    <div class="flex flex-col mt-4 gap-1">
+                      <span class="text-xs text-neutral-500 uppercase tracking-widest">Tuesday</span>
+                      <span class="text-xs font-mono text-orange-500">6:30 PM</span>
+                    </div>
+                  </div>
+                  <div class="flip-card-back bg-black border border-orange-600/30 p-6 flex flex-col justify-center items-center shadow-[0_0_20px_rgba(234,88,12,0.1)]">
+                    <span class="text-xs text-orange-600 uppercase tracking-widest mb-2 font-mono">Coach</span>
+                    <h5 class="text-white text-sm font-medium uppercase tracking-widest text-center">Edgardo Muller</h5>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 7. XCO Latin (Tuesday) -->
+              <div class="flip-card h-36 w-full cursor-pointer reveal-on-scroll group">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front bg-white/5 border border-white/5 p-6 flex flex-col justify-between group-hover:border-orange-900/50 group-hover:bg-white/10 transition-colors">
+                    <h5 class="text-white text-sm font-semibold uppercase tracking-widest leading-tight">XCO Latin</h5>
+                    <div class="flex flex-col mt-4 gap-1">
+                      <span class="text-xs text-neutral-500 uppercase tracking-widest">Tuesday</span>
+                      <span class="text-xs font-mono text-orange-500">7:15 PM</span>
+                    </div>
+                  </div>
+                  <div class="flip-card-back bg-black border border-orange-600/30 p-6 flex flex-col justify-center items-center shadow-[0_0_20px_rgba(234,88,12,0.1)]">
+                    <span class="text-xs text-orange-600 uppercase tracking-widest mb-2 font-mono">Coach</span>
+                    <h5 class="text-white text-sm font-medium uppercase tracking-widest text-center">Edgardo Muller</h5>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 8. Bootcamp -->
+              <div class="flip-card h-36 w-full cursor-pointer reveal-on-scroll group">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front bg-white/5 border border-white/5 p-6 flex flex-col justify-between group-hover:border-orange-900/50 group-hover:bg-white/10 transition-colors">
+                    <h5 class="text-white text-sm font-semibold uppercase tracking-widest leading-tight">Bootcamp</h5>
+                    <div class="flex flex-col mt-4 gap-1">
+                      <span class="text-xs text-neutral-500 uppercase tracking-widest">Wednesday</span>
+                      <span class="text-xs font-mono text-orange-500">5:30 PM</span>
+                    </div>
+                  </div>
+                  <div class="flip-card-back bg-black border border-orange-600/30 p-6 flex flex-col justify-center items-center shadow-[0_0_20px_rgba(234,88,12,0.1)]">
+                    <span class="text-xs text-orange-600 uppercase tracking-widest mb-2 font-mono">Coach</span>
+                    <h5 class="text-white text-sm font-medium uppercase tracking-widest text-center">Yamiraliz Flores</h5>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 9. Zumba (Wednesday) -->
+              <div class="flip-card h-36 w-full cursor-pointer reveal-on-scroll group">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front bg-white/5 border border-white/5 p-6 flex flex-col justify-between group-hover:border-orange-900/50 group-hover:bg-white/10 transition-colors">
+                    <h5 class="text-white text-sm font-semibold uppercase tracking-widest leading-tight">Zumba</h5>
+                    <div class="flex flex-col mt-4 gap-1">
+                      <span class="text-xs text-neutral-500 uppercase tracking-widest">Wednesday</span>
+                      <span class="text-xs font-mono text-orange-500">6:30 PM</span>
+                    </div>
+                  </div>
+                  <div class="flip-card-back bg-black border border-orange-600/30 p-6 flex flex-col justify-center items-center shadow-[0_0_20px_rgba(234,88,12,0.1)]">
+                    <span class="text-xs text-orange-600 uppercase tracking-widest mb-2 font-mono">Coach</span>
+                    <h5 class="text-white text-sm font-medium uppercase tracking-widest text-center">Linda</h5>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 10. XCO Latin (Thursday) -->
+              <div class="flip-card h-36 w-full cursor-pointer reveal-on-scroll group">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front bg-white/5 border border-white/5 p-6 flex flex-col justify-between group-hover:border-orange-900/50 group-hover:bg-white/10 transition-colors">
+                    <h5 class="text-white text-sm font-semibold uppercase tracking-widest leading-tight">XCO Latin</h5>
+                    <div class="flex flex-col mt-4 gap-1">
+                      <span class="text-xs text-neutral-500 uppercase tracking-widest">Thursday</span>
+                      <span class="text-xs font-mono text-orange-500">6:30 PM</span>
+                    </div>
+                  </div>
+                  <div class="flip-card-back bg-black border border-orange-600/30 p-6 flex flex-col justify-center items-center shadow-[0_0_20px_rgba(234,88,12,0.1)]">
+                    <span class="text-xs text-orange-600 uppercase tracking-widest mb-2 font-mono">Coach</span>
+                    <h5 class="text-white text-sm font-medium uppercase tracking-widest text-center">Edgardo Muller</h5>
+                  </div>
+                </div>
+              </div>
+
+              <!-- 11. Zumba (Thursday) -->
+              <div class="flip-card h-36 w-full cursor-pointer reveal-on-scroll group">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front bg-white/5 border border-white/5 p-6 flex flex-col justify-between group-hover:border-orange-900/50 group-hover:bg-white/10 transition-colors">
+                    <h5 class="text-white text-sm font-semibold uppercase tracking-widest leading-tight">Zumba</h5>
+                    <div class="flex flex-col mt-4 gap-1">
+                      <span class="text-xs text-neutral-500 uppercase tracking-widest">Thursday</span>
+                      <span class="text-xs font-mono text-orange-500">7:15 PM</span>
+                    </div>
+                  </div>
+                  <div class="flip-card-back bg-black border border-orange-600/30 p-6 flex flex-col justify-center items-center shadow-[0_0_20px_rgba(234,88,12,0.1)]">
+                    <span class="text-xs text-orange-600 uppercase tracking-widest mb-2 font-mono">Coach</span>
+                    <h5 class="text-white text-sm font-medium uppercase tracking-widest text-center">Edgardo Muller</h5>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Real Transformations Section -->
+    <section class="bg-black pt-32 pb-32 border-t border-neutral-900 relative overflow-hidden" id="transformations">
+      <div class="absolute inset-0 bg-gradient-to-b from-transparent to-neutral-950/50 pointer-events-none"></div>
+      
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-5xl font-medium text-white tracking-tight uppercase reveal-on-scroll">
+            Real <span class="text-orange-600">Transformations</span>
+          </h2>
+          <p class="text-neutral-500 text-sm tracking-wide uppercase mt-2 reveal-on-scroll">
+            Results speak for themselves
+          </p>
+        </div>
+
+        <div class="relative max-w-6xl mx-auto reveal-on-scroll group">
+          <!-- Navigation Arrows (Desktop) -->
+          <button class="hidden md:flex -left-5 -translate-y-1/2 hover:text-orange-600 hover:border-orange-600/50 transition-all cursor-pointer group-hover:opacity-100 duration-300 z-20 text-white bg-black opacity-0 w-12 h-12 border-white/10 border rounded-full absolute top-1/2 shadow-lg items-center justify-center" id="prev-slide">
+            <iconify-icon icon="solar:alt-arrow-left-linear" width="24" class="" height="24" style="color: rgb(234, 88, 12)"></iconify-icon>
+          </button>
+          
+          <!-- FIXED: Added id="next-slide" -->
+          <button class="hidden md:flex -right-5 -translate-y-1/2 hover:text-orange-600 hover:border-orange-600/50 transition-all cursor-pointer group-hover:opacity-100 duration-300 text-white bg-black opacity-0 w-12 h-12 z-20 border-white/10 border rounded-full absolute top-1/2 shadow-lg items-center justify-center" id="next-slide">
+            <iconify-icon icon="solar:alt-arrow-right-linear" width="24" class="" height="24" style="color: rgb(234, 88, 12)"></iconify-icon>
+          </button>
+
+          <!-- Slider Track -->
+          <div id="transformation-slider" class="flex gap-6 overflow-x-auto snap-x snap-mandatory hide-scrollbar pb-8 pt-4 px-2">
+            
+            <!-- Slide 1 -->
+            <div class="flex-shrink-0 w-[85vw] sm:w-[500px] snap-center bg-white/5 border border-white/5 hover:border-orange-900/30 hover:bg-white/10 transition-colors p-4 group/slide">
+              <div class="flex gap-2 mb-4 h-64 sm:h-72">
+                <div class="w-1/2 relative overflow-hidden bg-neutral-950">
+                  <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/de0c5f0c-dc8d-4fb5-baf3-e0958045de4a_800w.png" alt="Before" class="group-hover/slide:grayscale-0 transition-all duration-700 w-full h-full brightness-75">
+                  <span class="absolute top-2 left-2 bg-black/80 text-neutral-400 text-[10px] uppercase tracking-widest px-2 py-1 backdrop-blur-sm border border-white/10">Before</span>
+                </div>
+                <div class="w-1/2 relative overflow-hidden bg-neutral-950">
+                  <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/d3a9a68e-0af1-4270-8574-8c5dd8264990_800w.png" alt="After" class="group-hover/slide:grayscale-0 transition-all duration-700 w-full h-full brightness-90">
+                  <span class="absolute top-2 right-2 bg-orange-600/90 text-white text-[10px] uppercase tracking-widest px-2 py-1 backdrop-blur-sm border border-orange-500/50">After</span>
+                </div>
+              </div>
+              <div class="flex justify-between items-center px-1">
+                <span class="text-white text-sm font-semibold uppercase tracking-widest">Client 01</span>
+                <span class="text-orange-500 text-xs font-mono">-24 lbs / + Lean Mass</span>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="flex-shrink-0 w-[85vw] sm:w-[500px] snap-center bg-white/5 border border-white/5 hover:border-orange-900/30 hover:bg-white/10 transition-colors p-4 group/slide">
+              <div class="flex gap-2 mb-4 h-64 sm:h-72">
+                <div class="w-1/2 relative overflow-hidden bg-neutral-950">
+                  <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/e4890c39-2ea9-4207-887b-06dc2030306c_800w.png" alt="Before" class="group-hover/slide:grayscale-0 transition-all duration-700 w-full h-full object-cover brightness-75">
+                  <span class="absolute top-2 left-2 bg-black/80 text-neutral-400 text-[10px] uppercase tracking-widest px-2 py-1 backdrop-blur-sm border border-white/10">Before</span>
+                </div>
+                <div class="w-1/2 relative overflow-hidden bg-neutral-950">
+                  <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/03ef73f2-fa4e-4364-b70e-0c68e401bcaf_800w.png" alt="After" class="group-hover/slide:grayscale-0 transition-all duration-700 w-full h-full object-cover brightness-90">
+                  <span class="absolute top-2 right-2 bg-orange-600/90 text-white text-[10px] uppercase tracking-widest px-2 py-1 backdrop-blur-sm border border-orange-500/50">After</span>
+                </div>
+              </div>
+              <div class="flex justify-between items-center px-1">
+                <span class="text-white text-sm font-semibold uppercase tracking-widest">Client 02</span>
+                <span class="text-orange-500 text-xs font-mono">-18 lbs / Tone</span>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="flex-shrink-0 w-[85vw] sm:w-[500px] snap-center bg-white/5 border border-white/5 hover:border-orange-900/30 hover:bg-white/10 transition-colors p-4 group/slide">
+              <div class="flex gap-2 mb-4 h-64 sm:h-72">
+                <div class="w-1/2 relative overflow-hidden bg-neutral-950">
+                  <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/1f46ac1b-ffe8-4893-9682-c0dce7c9e613_1600w.png" alt="Before" class="group-hover/slide:grayscale-0 transition-all duration-700 object-auto w-full h-full brightness-75">
+                  <span class="absolute top-2 left-2 bg-black/80 text-neutral-400 text-[10px] uppercase tracking-widest px-2 py-1 backdrop-blur-sm border border-white/10">Before</span>
+                </div>
+                <div class="w-1/2 relative overflow-hidden bg-neutral-950">
+                  <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/0c541434-68a8-495c-ad28-f16e5dc92832_800w.png" alt="After" class="group-hover/slide:grayscale-0 transition-all duration-700 w-full h-full object-cover brightness-90">
+                  <span class="absolute top-2 right-2 bg-orange-600/90 text-white text-[10px] uppercase tracking-widest px-2 py-1 backdrop-blur-sm border border-orange-500/50">After</span>
+                </div>
+              </div>
+              <div class="flex justify-between items-center px-1">
+                <span class="text-white text-sm font-semibold uppercase tracking-widest">Client 03</span>
+                <span class="text-orange-500 text-xs font-mono">+12 lbs Muscle</span>
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="flex-shrink-0 w-[85vw] sm:w-[500px] snap-center bg-white/5 border border-white/5 hover:border-orange-900/30 hover:bg-white/10 transition-colors p-4 group/slide">
+              <div class="flex gap-2 mb-4 h-64 sm:h-72">
+                <div class="w-1/2 relative overflow-hidden bg-neutral-950">
+                  <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/1fb3864d-955d-4504-9a61-6236475d9647_800w.png" alt="Before" class="group-hover/slide:grayscale-0 transition-all duration-700 w-full h-full object-cover brightness-75">
+                  <span class="absolute top-2 left-2 bg-black/80 text-neutral-400 text-[10px] uppercase tracking-widest px-2 py-1 backdrop-blur-sm border border-white/10">Before</span>
+                </div>
+                <div class="w-1/2 relative overflow-hidden bg-neutral-950">
+                  <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/a6f293ad-42b7-40c1-934d-f240245a0a34_1600w.png" alt="After" class="group-hover/slide:grayscale-0 transition-all duration-700 object-repeat w-full h-full brightness-90">
+                  <span class="absolute top-2 right-2 bg-orange-600/90 text-white text-[10px] uppercase tracking-widest px-2 py-1 backdrop-blur-sm border border-orange-500/50">After</span>
+                </div>
+              </div>
+              <div class="flex justify-between items-center px-1">
+                <span class="text-white text-sm font-semibold uppercase tracking-widest">Client 04</span>
+                <span class="text-orange-500 text-xs font-mono">-30 lbs / Full Recomp</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="membership" class="py-32 bg-neutral-950 relative border-t border-neutral-900">
+      <div class="opacity-5 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] absolute top-0 right-0 bottom-0 left-0"></div>
+
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="text-center mb-20">
+          <h2 class="text-4xl md:text-5xl font-medium text-white tracking-tight mb-4 uppercase reveal-on-scroll">
+            Pricing &amp; Membership
+          </h2>
+          <p class="text-neutral-500 text-sm tracking-wide uppercase reveal-on-scroll">
+            Choose your commitment
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+          <!-- Tier 1: Basic -->
+          <div class="group hover:border-white/20 flex flex-col transition-all duration-300 reveal-on-scroll bg-white/5 border-white/5 border pt-8 pr-8 pb-8 pl-8 relative">
+            <div class="mb-8">
+              <h3 class="uppercase text-lg font-semibold text-white tracking-widest reveal-on-scroll">Basic</h3>
+              <div class="mt-4 flex items-baseline">
+                <span class="text-4xl font-semibold text-white tracking-tight">$25.99</span>
+                <span class="ml-2 text-sm text-neutral-500">/mo.</span>
+              </div>
+            </div>
+            <ul class="space-y-4 mb-10 flex-1">
+              <li class="flex items-start gap-3 text-sm text-neutral-400">
+                <iconify-icon icon="solar:check-read-linear" class="text-neutral-600 mt-0.5" width="16"></iconify-icon>
+                <span class="">Gym access</span>
+              </li>
+            </ul>
+            <a href="https://wa.me/17879039363?text=Hola,%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20gimnasio%20y%20sus%20servicios.%20Gracias." target="_blank" rel="noopener noreferrer" class="block text-center uppercase hover:bg-white hover:text-black transition-all text-xs font-semibold text-white tracking-widest w-full border-white/10 border pt-4 pb-4">Click for More Information</a>
+          </div>
+
+          <!-- Tier 2: Intermediate (Featured) -->
+          <div class="group flex flex-col z-10 reveal-on-scroll bg-black border-orange-600/50 border pt-10 pr-10 pb-10 pl-10 relative shadow-[0_0_50px_rgba(234,88,12,0.1)] scale-105">
+            <div class="absolute top-0 inset-x-0 h-1 bg-orange-600 shadow-[0_0_20px_rgba(249,115,22,0.8)]"></div>
+            <div class="mb-8">
+              <div class="flex mb-2 items-center justify-between">
+                <h3 class="uppercase text-xl font-semibold text-white tracking-widest reveal-on-scroll">Intermediate</h3>
+                <span class="bg-orange-600/10 text-orange-500 text-xs font-semibold px-2 py-1 uppercase tracking-widest border border-orange-600/30">
+                  Popular
+                </span>
+              </div>
+              <div class="mt-4 flex items-baseline">
+                <span class="glow-text text-5xl font-semibold text-white tracking-tight">$29.99</span>
+                <span class="ml-2 text-sm text-neutral-400">/mo.</span>
+              </div>
+            </div>
+            <ul class="space-y-5 mb-10 flex-1">
+              <li class="flex gap-3 text-sm text-white gap-x-3 gap-y-3 items-start">
+                <iconify-icon icon="solar:check-read-linear" class="text-orange-600 mt-0.5" width="16"></iconify-icon>
+                <span class="">Gym access</span>
+              </li>
+              <li class="flex items-start gap-3 text-sm text-white">
+                <iconify-icon icon="solar:check-read-linear" class="text-orange-600 mt-0.5" width="16"></iconify-icon>
+                <span class="">Aerobics and Spinning Classes</span>
+              </li>
+              <li class="flex items-start gap-3 text-sm text-white">
+                <iconify-icon icon="solar:check-read-linear" class="text-orange-600 mt-0.5" width="16"></iconify-icon>
+                <span class="">Monthly evaluation</span>
+              </li>
+            </ul>
+            <a href="https://wa.me/17879039363?text=Hola,%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20gimnasio%20y%20sus%20servicios.%20Gracias." target="_blank" rel="noopener noreferrer" class="block text-center uppercase hover:bg-orange-600 transition-all text-xs font-semibold text-white tracking-widest bg-orange-700 w-full pt-4 pb-4 shadow-[0_0_20px_rgba(194,65,12,0.3)]">Click for more information</a>
+          </div>
+
+          <!-- Tier 3: All-Inclusive -->
+          <div class="group relative bg-white/5 border border-white/5 hover:border-white/20 p-8 flex flex-col transition-all duration-300 reveal-on-scroll">
+            <div class="mb-8">
+              <h3 class="uppercase text-lg font-semibold text-white tracking-widest reveal-on-scroll">All - Inclusive Plan</h3>
+              <div class="mt-4 flex items-baseline">
+                <span class="text-4xl font-semibold text-white tracking-tight">$36.99</span>
+                <span class="ml-2 text-sm text-neutral-500">/mo.</span>
+              </div>
+            </div>
+            <ul class="space-y-4 mb-10 flex-1">
+              <li class="flex gap-3 text-sm text-neutral-400 gap-x-3 gap-y-3 items-start">
+                <iconify-icon icon="solar:check-read-linear" class="text-neutral-600 mt-0.5" width="16"></iconify-icon>
+                <span class="">Gym access</span>
+              </li>
+              <li class="flex items-start gap-3 text-sm text-neutral-400">
+                <iconify-icon icon="solar:check-read-linear" class="text-neutral-600 mt-0.5" width="16"></iconify-icon>
+                <span class="">Aerobic and Spinning classes</span>
+              </li>
+              <li class="flex items-start gap-3 text-sm text-neutral-400">
+                <iconify-icon icon="solar:check-read-linear" class="text-neutral-600 mt-0.5" width="16"></iconify-icon>
+                <span class="">Monthly Workout Plan and Evaluation</span>
+              </li>
+            </ul>
+            <a href="https://wa.me/17879039363?text=Hola,%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20gimnasio%20y%20sus%20servicios.%20Gracias." target="_blank" rel="noopener noreferrer" class="block text-center uppercase hover:bg-white hover:text-black transition-all text-xs font-semibold text-white tracking-widest w-full border-white/10 border pt-4 pb-4">Click for More information</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black pt-24 pb-12 border-t border-neutral-900">
+      <div class="max-w-7xl mr-auto ml-auto pr-6 pl-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16 gap-x-12 gap-y-12">
+          <div class="col-span-1 md:col-span-2">
+            <!-- Footer Logo using Uploaded Asset -->
+            <a href="#" class="block w-40 md:w-56 mb-6">
+              <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/f5eb35ea-f505-4650-9c25-bb3a74eecb16_800w.jpg" alt="BodyMakers Logo" class="w-full h-auto object-contain invert grayscale contrast-125 mix-blend-screen">
+            </a>
+            
+            <p class="text-neutral-500 text-sm max-w-sm leading-relaxed reveal-on-scroll">
+              An underground facility for those who refuse mediocrity. 
+              We exist in the shadows to ignite the light within you.
+            </p>
+            <div class="flex mt-8 gap-x-6 gap-y-6">
+              <a href="https://www.instagram.com/bodymakerstrainingcomplex/" class="hover:opacity-80 transition-opacity">
+  <iconify-icon icon="skill-icons:instagram" width="20" height="20"></iconify-icon>
+</a>
+              <a href="https://www.facebook.com/Bodymakerstrainingcomplex1" class="hover:text-orange-600 transition-colors text-neutral-600">
+                <iconify-icon icon="logos:facebook" width="20" class="" height="20"></iconify-icon>
+              </a>
+            </div>
+          </div>
+
+          <div class="">
+            <h4 class="text-white text-xs font-semibold uppercase tracking-widest mb-6 text-orange-700">
+              Location &amp; Hours
+            </h4>
+            <p class="leading-relaxed reveal-on-scroll text-sm text-neutral-500 mb-4 cursor-pointer" onclick="window.location.href='https://maps.app.goo.gl/68oQ8G7ksKD6XiKL6'" role="button">BodyMakers<br class="">San Isidro Industrial Park, Canóvanas PR</p>
+            
+            <ul class="space-y-2 text-xs text-neutral-500 font-mono reveal-on-scroll mb-4 border-l border-orange-900/30 pl-3">
+              <li class="flex justify-between gap-4"><span class="text-neutral-400 font-sans uppercase tracking-wider">Mon – Thu</span> <span>5:00 AM – 10:00 PM</span></li>
+              <li class="flex justify-between gap-4"><span class="text-neutral-400 font-sans uppercase tracking-wider">Friday</span> <span>5:00 AM – 9:00 PM</span></li>
+              <li class="flex justify-between gap-4"><span class="text-neutral-400 font-sans uppercase tracking-wider">Saturday</span> <span class="">8:00 AM – 4:00 PM</span></li>
+            </ul>
+            
+            <a href="mailto:bodymakerstc@yahoo.com" class="block hover:text-orange-500 transition-colors cursor-pointer reveal-on-scroll text-sm text-neutral-500 mt-4">bodymakerstc@yahoo.com</a>
+          </div>
+
+          <div class="">
+            <h4 class="text-white text-xs font-semibold uppercase tracking-widest mb-6 text-orange-700">
+              Legal
+            </h4>
+            <ul class="space-y-3 text-sm text-neutral-600 font-normal">
+              <li class="">
+                <a href="#" class="hover:text-white transition-colors">
+                  Imprint
+                </a>
+              </li>
+              <li class="">
+                <a href="#" class="hover:text-white transition-colors">
+                  Privacy Policy
+                </a>
+              </li>
+              <li class="">
+                <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-neutral-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p class="text-neutral-800 text-xs uppercase tracking-widest reveal-on-scroll">
+            © 2024 BodyMakers. All Rights Reserved.
+          </p>
+          <div class="flex items-center gap-3">
+            <div class="w-1.5 h-1.5 rounded-full bg-orange-600 animate-pulse shadow-[0_0_10px_orange]"></div>
+            <span class="text-neutral-600 text-xs font-mono tracking-widest">
+              SYSTEM STATUS: ONLINE
+            </span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Clear scroll position on navigation events inside script for additional safety
+      window.addEventListener('beforeunload', function () {
+          window.scrollTo(0, 0);
+      });
+      
+      // Extended translation engine with all content properly mapped
+      const langTranslations = {
+          "Philosophy": "Filosofía",
+          "Biometrics": "Biometría",
+          "Supplements": "Suplementos",
+          "Schedule": "Horario",
+          "Pricing": "Precios",
+          "Other Services": "Otros Servicios",
+          "Join Us": "Únete",
+          "Contact": "Contacto",
+          "Train Like the Elite": "Entrena como la Élite",
+          "Luxury is not comfort. Luxury is the ability to withstand. Welcome to the underground sanctuary of the elite.": "El lujo no es comodidad. El lujo es la capacidad de resistir. Bienvenido al santuario subterráneo de la élite.",
+          "Capacity: 89% Booked": "Capacidad: 89% Reservado",
+          "Strength": "Fuerza",
+          "Conditioning": "Acondicionamiento",
+          "The Manifesto": "El Manifiesto",
+          "We don't sell": "No vendemos",
+          "fitness.": "fitness.",
+          "We forge": "Forjamos",
+          "dominance.": "dominio.",
+          "The modern world makes you soft. It offers convenience at the expense of performance. At BodyMakers, we remove the excess. No distractions. No mirrors. Only raw iron and the will to defeat gravity.": "El mundo moderno te hace débil. Ofrece comodidad a expensas del rendimiento. En BodyMakers, eliminamos el exceso. Sin distracciones. Sin espejos. Solo hierro puro y la voluntad de vencer la gravedad.",
+          "Designed by brutalist architects and elite performance coaches, our facility is an asymmetrical landscape of challenge. Every angle, every shadow is calculated to focus your mind on the only thing that matters: Output.": "Diseñada por arquitectos brutalistas y entrenadores de rendimiento de élite, nuestra instalación es un paisaje asimétrico de desafíos. Cada ángulo, cada sombra está calculada para enfocar tu mente en lo único que importa: el Rendimiento.",
+          "We believe in the purity of pain. Growth only happens at the point of resistance. BodyMakers is the anvil on which you reforge yourself – harder, sharper, unbreakable.": "Creemos en la pureza del dolor. El crecimiento solo ocurre en el punto de resistencia. BodyMakers es el yunque sobre el cual te forjas de nuevo: más duro, más afilado, inquebrantable.",
+          "Elite Members": "Miembros de Élite",
+          "Our Philosophy": "Nuestra Filosofía",
+          "Sector 04 // Free Weights": "Sector 04 // Pesas Libres",
+          "Biometric Synchronization": "Sincronización Biométrica",
+          "Biometrics &": "Biometría y",
+          "Analysis": "Análisis",
+          "Measure your body fat, muscle mass, and weight in seconds with our advanced body analysis machine—everything you need to track your progress in one place.": "Mide tu grasa corporal, masa muscular y peso en segundos con nuestra avanzada máquina de análisis: todo lo que necesitas para rastrear tu progreso en un solo lugar.",
+          "Performance Training": "Entrenamiento de Rendimiento",
+          "Train with purpose using top-tier equipment designed to maximize strength, endurance, and results.": "Entrena con propósito utilizando equipo de primer nivel diseñado para maximizar fuerza, resistencia y resultados.",
+          "Community Driven": "Comunidad",
+          "Join a focused and supportive environment where everyone is committed to growth and consistency.": "Únete a un ambiente enfocado y de apoyo donde todos están comprometidos con el crecimiento y la consistencia.",
+          "Flexible hours": "Horario Flexible",
+          "Train on your schedule with extended hours that fit your lifestyle.": "Entrena a tu propio ritmo con horarios extendidos que se adaptan a tu estilo de vida.",
+          "Goals & Atmosphere": "Metas y Ambiente",
+          "Where shadow meets steel.": "Donde la sombra se encuentra con el acero.",
+          "Full Gallery": "Galería Completa",
+          "Free Weights Area": "Área de Pesas Libres",
+          "Olympic Standard": "Estándar Olímpico",
+          "Our Goals": "Nuestras Metas",
+          "Physical Dominance": "Dominio Físico",
+          "Mental Toughness": "Fortaleza Mental",
+          "Aesthetic Perfection": "Perfección Estética",
+          "Cardio Theater": "Teatro de Cardio",
+          "Immersive Experience": "Experiencia Inmersiva",
+          "Schedule & Hours": "Horario y Horas",
+          "Discipline demands structure.": "La disciplina exige estructura.",
+          "Facility Hours": "Horas de Instalación",
+          "Monday – Thursday": "Lunes – Jueves",
+          "Friday": "Viernes",
+          "Saturday": "Sábado",
+          "Class Schedule": "Horario de Clases",
+          "Monday": "Lunes",
+          "Tuesday": "Martes",
+          "Wednesday": "Miércoles",
+          "Thursday": "Jueves",
+          "Mon / Tue / Thu": "Lun / Mar / Jue",
+          "Mon – Thu": "Lun – Jue",
+          "Coach": "Coach",
+          "Real": "Reales",
+          "Transformations": "Transformaciones",
+          "Results speak for themselves": "Los resultados hablan por sí mismos",
+          "Before": "Antes",
+          "After": "Después",
+          "Client 01": "Cliente 01",
+          "Client 02": "Cliente 02",
+          "Client 03": "Cliente 03",
+          "Client 04": "Cliente 04",
+          "-24 lbs / + Lean Mass": "-24 lbs / + Masa Magra",
+          "-18 lbs / Tone": "-18 lbs / Tono",
+          "+12 lbs Muscle": "+12 lbs Músculo",
+          "-30 lbs / Full Recomp": "-30 lbs / Recomp. Total",
+          "Pricing & Membership": "Precios y Membresía",
+          "Choose your commitment": "Elige tu compromiso",
+          "Basic": "Básico",
+          "/mo.": "/mes",
+          "Gym access": "Acceso al gimnasio",
+          "Click for More Information": "Haz clic para más información",
+          "Click for more information": "Haz clic para más información",
+          "Intermediate": "Intermedio",
+          "Popular": "Popular",
+          "Aerobics and Spinning Classes": "Clases de Aeróbicos y Spinning",
+          "Monthly evaluation": "Evaluación mensual",
+          "All - Inclusive Plan": "Plan Todo Incluido",
+          "Aerobic and Spinning classes": "Clases de Aeróbicos y Spinning",
+          "Monthly Workout Plan and Evaluation": "Plan de Entrenamiento y Evaluación Mensual",
+          "An underground facility for those who refuse mediocrity. We exist in the shadows to ignite the light within you.": "Una instalación subterránea para aquellos que rechazan la mediocridad. Existimos en las sombras para encender la luz en tu interior.",
+          "Location & Hours": "Ubicación y Horarios",
+          "Legal": "Legal",
+          "Imprint": "Aviso Legal",
+          "Privacy Policy": "Política de Privacidad",
+          "Terms of Service": "Términos de Servicio",
+          "© 2024 BodyMakers. All Rights Reserved.": "© 2024 BodyMakers. Todos los derechos reservados.",
+          "SYSTEM STATUS: ONLINE": "ESTADO DEL SISTEMA: EN LÍNEA"
+      };
+
+      let currentLang = 'EN';
+
+      function toggleLanguage() {
+          const newLang = currentLang === 'EN' ? 'ES' : 'EN';
+          const isToEs = newLang === 'ES';
+          
+          document.querySelectorAll('.lang-btn-en').forEach(el => {
+              if (isToEs) {
+                  el.classList.replace('text-white', 'text-neutral-500');
+                  el.classList.add('hover:text-white');
+              } else {
+                  el.classList.replace('text-neutral-500', 'text-white');
+                  el.classList.remove('hover:text-white');
+              }
+          });
+          
+          document.querySelectorAll('.lang-btn-es').forEach(el => {
+              if (isToEs) {
+                  el.classList.replace('text-neutral-500', 'text-white');
+                  el.classList.remove('hover:text-white');
+              } else {
+                  el.classList.replace('text-white', 'text-neutral-500');
+                  el.classList.add('hover:text-white');
+              }
+          });
+          
+          const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, null, false);
+          let node;
+          while(node = walker.nextNode()) {
+              // Ensure we do not translate inside script or style tags
+              if (node.parentNode && (node.parentNode.tagName === 'SCRIPT' || node.parentNode.tagName === 'STYLE')) continue;
+
+              let originalText = node.nodeValue;
+              // Normalize internal spaces to single spaces to easily match the dictionary string
+              let normalized = originalText.replace(/\s+/g, ' ').trim();
+              if(!normalized) continue;
+              
+              if(isToEs) {
+                  if(langTranslations[normalized]) {
+                      // We replace `originalText.trim()` to preserve the original surrounding line breaks/spaces securely
+                      node.nodeValue = originalText.replace(originalText.trim(), langTranslations[normalized]);
+                  }
+              } else {
+                  const enKey = Object.keys(langTranslations).find(k => langTranslations[k] === normalized);
+                  if(enKey) {
+                      node.nodeValue = originalText.replace(originalText.trim(), enKey);
+                  }
+              }
+          }
+          currentLang = newLang;
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+          // Intersection Observer for scroll reveal animations
+          const observerOptions = {
+              threshold: 0.1,
+              rootMargin: "0px"
+          };
+
+          const observer = new IntersectionObserver((entries) => {
+              entries.forEach(entry => {
+                  if (entry.isIntersecting) {
+                      entry.target.classList.add('reveal-visible');
+                  }
+              });
+          }, observerOptions);
+
+          // Observe elements with reveal-on-scroll
+          document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+              observer.observe(el);
+          });
+
+          // Smooth scrolling behavior
+          document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+              anchor.addEventListener('click', function (e) {
+                  e.preventDefault();
+                  const targetId = this.getAttribute('href');
+                  if(targetId === '#') return;
+                  const target = document.querySelector(targetId);
+                  if (target) {
+                      target.scrollIntoView({
+                          behavior: 'smooth'
+                      });
+                  }
+              });
+          });
+
+          // Premium Slide-In Mobile Menu Functionality
+          const mobileBtn = document.getElementById('mobile-menu-btn');
+          const mobileMenu = document.getElementById('mobile-menu');
+          const mobileLinks = document.querySelectorAll('.mobile-link');
+          let isMenuOpen = false;
+
+          function toggleMenu() {
+              isMenuOpen = !isMenuOpen;
+              if (isMenuOpen) {
+                  mobileMenu.classList.remove('translate-x-full');
+                  mobileMenu.classList.add('translate-x-0');
+                  mobileBtn.innerHTML = '<iconify-icon icon="solar:close-circle-linear" width="28"></iconify-icon>';
+                  document.body.style.overflow = 'hidden'; // Prevent scrolling while menu is open
+              } else {
+                  mobileMenu.classList.remove('translate-x-0');
+                  mobileMenu.classList.add('translate-x-full');
+                  mobileBtn.innerHTML = '<iconify-icon icon="solar:hamburger-menu-linear" width="28"></iconify-icon>';
+                  document.body.style.overflow = ''; // Restore scrolling
+              }
+          }
+
+          if(mobileBtn) mobileBtn.addEventListener('click', toggleMenu);
+
+          mobileLinks.forEach(link => {
+              link.addEventListener('click', () => {
+                  if (isMenuOpen) toggleMenu(); // Close menu when a link is clicked
+              });
+          });
+
+          // Transformation Slider Logic
+          const transSlider = document.getElementById('transformation-slider');
+          const prevTransBtn = document.getElementById('prev-slide');
+          const nextTransBtn = document.getElementById('next-slide');
+          
+          if(transSlider) {
+              let autoplayInterval;
+
+              const startAutoplay = () => {
+                  autoplayInterval = setInterval(() => {
+                      if (transSlider.scrollLeft + transSlider.clientWidth >= transSlider.scrollWidth - 10) {
+                          transSlider.scrollTo({ left: 0, behavior: 'smooth' });
+                      } else {
+                          transSlider.scrollBy({ left: 320, behavior: 'smooth' });
+                      }
+                  }, 4000);
+              };
+
+              const stopAutoplay = () => {
+                  clearInterval(autoplayInterval);
+              };
+
+              startAutoplay();
+
+              transSlider.addEventListener('mouseenter', stopAutoplay);
+              transSlider.addEventListener('mouseleave', startAutoplay);
+              transSlider.addEventListener('touchstart', stopAutoplay, {passive: true});
+              transSlider.addEventListener('touchend', startAutoplay, {passive: true});
+
+              if(prevTransBtn) {
+                  prevTransBtn.addEventListener('click', () => {
+                      stopAutoplay();
+                      transSlider.scrollBy({ left: -320, behavior: 'smooth' });
+                      startAutoplay();
+                  });
+                  prevTransBtn.addEventListener('mouseenter', stopAutoplay);
+              }
+              
+              if(nextTransBtn) {
+                  nextTransBtn.addEventListener('click', () => {
+                      stopAutoplay();
+                      transSlider.scrollBy({ left: 320, behavior: 'smooth' });
+                      startAutoplay();
+                  });
+                  nextTransBtn.addEventListener('mouseenter', stopAutoplay);
+              }
+          }
+      });
+    </script>
+</body></html>
