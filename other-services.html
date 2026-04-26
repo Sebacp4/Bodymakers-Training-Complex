@@ -79,7 +79,7 @@ animation: heroFadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
 }
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"></head>
-<body class="antialiased selection:bg-orange-900 selection:text-white scroll-smooth bg-black">
+<body class="antialiased selection:bg-orange-900 selection:text-white scroll-smooth bg-black opacity-0 transition-opacity duration-500 ease-in-out">
 
     <!-- Left Sidebar Contact Button -->
     <div class="fixed left-0 top-1/2 -translate-y-1/2 z-40 hidden lg:block">
@@ -95,7 +95,7 @@ animation: heroFadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
       <div class="flex max-w-7xl mr-auto ml-auto items-center justify-between">
         <!-- Navbar Logo -->
         <a href="index.html" class="block w-40 md:w-56">
-          <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/f5eb35ea-f505-4650-9c25-bb3a74eecb16_800w.jpg" alt="BodyMakers Logo" class="contrast-125 mix-blend-screen w-full h-auto object-contain grayscale invert cursor-pointer" onclick="window.location.href='index.html'" role="button">
+          <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/f5eb35ea-f505-4650-9c25-bb3a74eecb16_800w.jpg" alt="BodyMakers Logo" class="contrast-125 mix-blend-screen w-full h-auto object-contain grayscale invert cursor-pointer" role="button">
         </a>
 
         <!-- Desktop Menu -->
@@ -174,7 +174,7 @@ animation: heroFadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
                     <p class="text-neutral-400 text-sm leading-relaxed mb-8" data-translate-key="barber_desc">
                         Professional cuts and grooming services available inside the gym.
                     </p>
-                    <a href="https://www.instagram.com/vm_barberstudio/" class="inline-flex items-center gap-2 uppercase group-hover:text-orange-600 transition-colors text-xs font-semibold text-white tracking-widest">
+                    <a href="https://www.instagram.com/vm_barberstudio/" target="_blank" class="inline-flex items-center gap-2 uppercase group-hover:text-orange-600 transition-colors text-xs font-semibold text-white tracking-widest">
                         <span data-translate-key="btn_learn">Learn More</span> <iconify-icon icon="solar:arrow-right-linear" width="16" class=""></iconify-icon>
                     </a>
                 </div>
@@ -186,7 +186,7 @@ animation: heroFadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
                     <p class="text-neutral-400 text-sm leading-relaxed mb-8" data-translate-key="coffee_desc">
                         Enjoy high-quality coffee and a relaxing atmosphere before or after your workout.
                     </p>
-                    <a href="https://www.instagram.com/la.petite.coffee/" class="inline-flex items-center gap-2 uppercase group-hover:text-orange-600 transition-colors text-xs font-semibold text-white tracking-widest">
+                    <a href="https://www.instagram.com/la.petite.coffee/" target="_blank" class="inline-flex items-center gap-2 uppercase group-hover:text-orange-600 transition-colors text-xs font-semibold text-white tracking-widest">
                         <span data-translate-key="btn_ig">View Instagram</span> <iconify-icon icon="solar:arrow-right-linear" width="16" class=""></iconify-icon>
                     </a>
                 </div>
@@ -198,7 +198,7 @@ animation: heroFadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
                     <p class="text-neutral-400 text-sm leading-relaxed mb-8" data-translate-key="crossfit_desc">
                         High-intensity functional training designed to push your limits and improve performance.
                     </p>
-                    <a href="https://www.jibaroscrossfit.com/" class="inline-flex items-center gap-2 uppercase group-hover:text-orange-600 transition-colors text-xs font-semibold text-white tracking-widest">
+                    <a href="https://www.jibaroscrossfit.com/" target="_blank" class="inline-flex items-center gap-2 uppercase group-hover:text-orange-600 transition-colors text-xs font-semibold text-white tracking-widest">
                         <span data-translate-key="btn_details">View Details</span> <iconify-icon icon="solar:arrow-right-linear" width="16" class=""></iconify-icon>
                     </a>
                 </div>
@@ -210,7 +210,7 @@ animation: heroFadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
                     <p class="text-neutral-400 text-sm leading-relaxed mb-8" data-translate-key="event_desc">
                         A unique fitness event combining competition, community, and island energy. Coming soon.
                     </p>
-                    <a href="https://circle21.events/guayaera-in-paradise" class="inline-flex items-center gap-2 uppercase group-hover:text-orange-600 transition-colors text-xs font-semibold text-white tracking-widest">
+                    <a href="https://circle21.events/guayaera-in-paradise" target="_blank" class="inline-flex items-center gap-2 uppercase group-hover:text-orange-600 transition-colors text-xs font-semibold text-white tracking-widest">
                         <span data-translate-key="btn_event">See Event</span> <iconify-icon icon="solar:arrow-right-linear" width="16" class=""></iconify-icon>
                     </a>
                 </div>
@@ -245,10 +245,10 @@ animation: heroFadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
               We exist in the shadows to ignite the light within you.
             </p>
             <div class="flex gap-6 mt-8">
-              <a href="https://www.instagram.com/bodymakerstrainingcomplex/" class="hover:text-orange-600 transition-colors text-neutral-600">
+              <a href="https://www.instagram.com/bodymakerstrainingcomplex/" target="_blank" class="hover:text-orange-600 transition-colors text-neutral-600">
                 <iconify-icon icon="simple-icons:instagram" width="20" class="" height="20" style="color: rgb(234, 88, 12);"></iconify-icon>
               </a>
-              <a href="https://www.facebook.com/Bodymakerstrainingcomplex1" class="hover:text-orange-600 transition-colors text-neutral-600">
+              <a href="https://www.facebook.com/Bodymakerstrainingcomplex1" target="_blank" class="hover:text-orange-600 transition-colors text-neutral-600">
                 <iconify-icon icon="logos:facebook" width="20" class="" height="20"></iconify-icon>
               </a>
             </div>
@@ -307,18 +307,17 @@ animation: heroFadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
       }
 
       forceTop();
-      document.addEventListener('DOMContentLoaded', forceTop);
-      window.addEventListener('load', () => {
-        forceTop();
-        setTimeout(forceTop, 10);
-      });
-      window.addEventListener('pageshow', (e) => {
-        if (e.persisted) {
-            forceTop();
-        }
-      });
-
+      
+      // Page Fade-in on load
       document.addEventListener('DOMContentLoaded', () => {
+          forceTop();
+          
+          // Trigger the initial fade-in
+          requestAnimationFrame(() => {
+              document.body.classList.remove('opacity-0');
+              document.body.classList.add('opacity-100');
+          });
+
           // Scroll Reveal Observer
           const observerOptions = {
               threshold: 0.1,
@@ -461,7 +460,6 @@ animation: heroFadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
             }
           };
 
-          // Function to apply translation
           function setLanguage(lang) {
               const elements = document.querySelectorAll('[data-translate-key]');
               elements.forEach(el => {
@@ -471,7 +469,6 @@ animation: heroFadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
                   }
               });
 
-              // Update active states on buttons
               document.querySelectorAll('.lang-btn').forEach(b => {
                   b.classList.remove('text-white');
                   b.classList.add('text-neutral-500');
@@ -482,15 +479,12 @@ animation: heroFadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
                   b.classList.add('text-white');
               });
 
-              // Save to localStorage
               localStorage.setItem('bodymakers_lang', lang);
           }
 
-          // Initial load from localStorage or default 'en'
           const savedLang = localStorage.getItem('bodymakers_lang') || 'en';
           setLanguage(savedLang);
 
-          // Listeners for Language Toggle
           const langBtns = document.querySelectorAll('.lang-btn');
           langBtns.forEach(btn => {
               btn.addEventListener('click', (e) => {
@@ -498,6 +492,54 @@ animation: heroFadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
                   setLanguage(selectedLang);
               });
           });
+      });
+
+      window.addEventListener('load', () => {
+        forceTop();
+        setTimeout(forceTop, 10);
+      });
+
+      window.addEventListener('pageshow', (e) => {
+        if (e.persisted) {
+            forceTop();
+        }
+        // Restore visibility if coming back from BFCache
+        document.body.classList.remove('opacity-0');
+        document.body.classList.add('opacity-100');
+      });
+
+      // Page Transition Link Interception
+      document.addEventListener('click', (e) => {
+          const link = e.target.closest('a');
+          if (!link) return;
+          
+          const href = link.getAttribute('href');
+          if (!href) return;
+          
+          // Ignore external links, emails, and blank targets
+          if (link.target === '_blank' || href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('tel:')) {
+              return;
+          }
+          
+          // Ignore hash links meant for the current page
+          const [path, hash] = href.split('#');
+          const currentPath = window.location.pathname;
+          
+          if (href.startsWith('#') || (path === currentPath && hash !== undefined) || (path === '' && hash !== undefined)) {
+              return;
+          }
+          
+          // Intercept valid internal navigation
+          e.preventDefault();
+          
+          // Fade out page
+          document.body.classList.remove('opacity-100');
+          document.body.classList.add('opacity-0');
+          
+          // Wait for CSS transition (500ms) then navigate
+          setTimeout(() => {
+              window.location.href = href;
+          }, 500);
       });
     </script>
 </body></html>

@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="en"><head><script>
 try{if(window.parent&&window.parent!==window){window.parent.promotekit_referral="1fd2949a-d22c-431b-92bf-02d4ad04ee24";window.parent.document.cookie="promotekit_referral=1fd2949a-d22c-431b-92bf-02d4ad04ee24;path=/;domain=.aura.build;max-age=31536000"}}catch(e){}
 // Force manual scroll restoration to prevent browser from keeping previous scroll position
@@ -23,11 +23,27 @@ window.scrollTo(0, 0);
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
 <style>
+html {
+background-color: #000000;
+}
 body {
 font-family: 'Manrope', sans-serif;
 background-color: #050505;
 color: #e5e5e5;
 overflow-x: hidden;
+}
+/* Page Transitions */
+.page-fade-in {
+animation: pageFadeIn 0.5s ease-out forwards;
+}
+.page-fade-out {
+opacity: 0 !important;
+transition: opacity 0.5s ease-out;
+pointer-events: none;
+}
+@keyframes pageFadeIn {
+from { opacity: 0; }
+to { opacity: 1; }
 }
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
@@ -99,6 +115,9 @@ transform: rotate(180deg);
 /* Flip Card Styles */
 .flip-card {
 perspective: 1000px;
+/* Add touch-action to prevent zooming issues on mobile tap */
+touch-action: manipulation;
+-webkit-tap-highlight-color: transparent;
 }
 .flip-card-inner {
 position: relative;
@@ -107,7 +126,14 @@ height: 100%;
 transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 transform-style: preserve-3d;
 }
+/* Only apply hover flip on devices with a mouse/pointer to prevent sticky hovers on mobile */
+@media (hover: hover) and (pointer: fine) {
 .flip-card:hover .flip-card-inner {
+transform: rotateY(180deg);
+}
+}
+/* Mobile/Tap active state */
+.flip-card.is-flipped .flip-card-inner {
 transform: rotateY(180deg);
 }
 .flip-card-front, .flip-card-back {
@@ -124,7 +150,7 @@ transform: rotateY(180deg);
 }
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"></head>
-<body class="antialiased selection:bg-orange-900 selection:text-white bg-black">
+<body class="antialiased selection:bg-orange-900 selection:text-white bg-black page-fade-in">
     
     <!-- Left Sidebar Contact Button -->
     <div class="fixed left-0 top-1/2 -translate-y-1/2 z-50 hidden lg:block">
@@ -305,7 +331,7 @@ transform: rotateY(180deg);
             <div class="absolute inset-0 bg-neutral-900 border border-neutral-800/50 p-1 group reveal-on-scroll">
               <div class="bg-center contrast-125 group-hover:opacity-80 transition-opacity duration-700 opacity-60 w-full h-full bg-[url(https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=1600&amp;q=80)] bg-cover grayscale brightness-75"></div>
               <div class="absolute bottom-6 left-6 right-6 border-t border-orange-600 pt-4 bg-gradient-to-t from-black/90 to-transparent p-4">
-                <div class="flex cursor-pointer items-end justify-between" onclick="window.location.href='gallery.html'" role="button">
+                <div class="flex cursor-pointer items-end justify-between" onclick="navigateTo('gallery.html')" role="button">
                   <div class="">
                     <span class="block text-white text-lg font-medium tracking-tight uppercase">
                       Our Philosophy
@@ -768,7 +794,6 @@ transform: rotateY(180deg);
             <iconify-icon icon="solar:alt-arrow-left-linear" width="24" class="" height="24" style="color: rgb(234, 88, 12)"></iconify-icon>
           </button>
           
-          <!-- FIXED: Added id="next-slide" -->
           <button class="hidden md:flex -right-5 -translate-y-1/2 hover:text-orange-600 hover:border-orange-600/50 transition-all cursor-pointer group-hover:opacity-100 duration-300 text-white bg-black opacity-0 w-12 h-12 z-20 border-white/10 border rounded-full absolute top-1/2 shadow-lg items-center justify-center" id="next-slide">
             <iconify-icon icon="solar:alt-arrow-right-linear" width="24" class="" height="24" style="color: rgb(234, 88, 12)"></iconify-icon>
           </button>
@@ -975,7 +1000,7 @@ transform: rotateY(180deg);
             <h4 class="text-white text-xs font-semibold uppercase tracking-widest mb-6 text-orange-700">
               Location &amp; Hours
             </h4>
-            <p class="leading-relaxed reveal-on-scroll text-sm text-neutral-500 mb-4 cursor-pointer" onclick="window.location.href='https://maps.app.goo.gl/68oQ8G7ksKD6XiKL6'" role="button">BodyMakers<br class="">San Isidro Industrial Park, Canóvanas PR</p>
+            <p class="leading-relaxed reveal-on-scroll text-sm text-neutral-500 mb-4 cursor-pointer" onclick="navigateTo('https://maps.app.goo.gl/68oQ8G7ksKD6XiKL6')" role="button">BodyMakers<br class="">San Isidro Industrial Park, Canóvanas PR</p>
             
             <ul class="space-y-2 text-xs text-neutral-500 font-mono reveal-on-scroll mb-4 border-l border-orange-900/30 pl-3">
               <li class="flex justify-between gap-4"><span class="text-neutral-400 font-sans uppercase tracking-wider">Mon – Thu</span> <span>5:00 AM – 10:00 PM</span></li>
@@ -1242,6 +1267,30 @@ transform: rotateY(180deg);
               });
           });
 
+          // Flip Card Logic for Mobile/Touch Devices
+          const flipCards = document.querySelectorAll('.flip-card');
+          flipCards.forEach(card => {
+              card.addEventListener('click', function(e) {
+                  // Check if the current card is already flipped
+                  const isFlipped = this.classList.contains('is-flipped');
+                  
+                  // Close all other cards first (optional but preferred behavior)
+                  flipCards.forEach(c => c.classList.remove('is-flipped'));
+                  
+                  // If it wasn't flipped before, flip it now
+                  if (!isFlipped) {
+                      this.classList.add('is-flipped');
+                  }
+              });
+          });
+
+          // Close any open flip cards when tapping outside
+          document.addEventListener('click', function(e) {
+              if (!e.target.closest('.flip-card')) {
+                  flipCards.forEach(c => c.classList.remove('is-flipped'));
+              }
+          });
+
           // Transformation Slider Logic
           const transSlider = document.getElementById('transformation-slider');
           const prevTransBtn = document.getElementById('prev-slide');
@@ -1288,6 +1337,37 @@ transform: rotateY(180deg);
                   });
                   nextTransBtn.addEventListener('mouseenter', stopAutoplay);
               }
+          }
+      });
+
+      // --- PAGE TRANSITION SETUP ---
+      window.navigateTo = function(url) {
+          document.body.classList.add('page-fade-out');
+          setTimeout(() => {
+              window.location.href = url;
+          }, 500); // 500ms duration
+      };
+
+      document.addEventListener('click', function(e) {
+          const link = e.target.closest('a');
+          if (!link) return;
+
+          const href = link.getAttribute('href');
+          const target = link.getAttribute('target');
+
+          // Do not intercept anchor links, external targets, emails, phones, or scripts
+          if (!href || href.startsWith('#') || target === '_blank' || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('javascript:')) {
+              return;
+          }
+
+          e.preventDefault();
+          navigateTo(href);
+      });
+
+      // Safeguard for browsers keeping faded state in cache when using back button
+      window.addEventListener('pageshow', function(event) {
+          if (event.persisted) {
+              document.body.classList.remove('page-fade-out');
           }
       });
     </script>

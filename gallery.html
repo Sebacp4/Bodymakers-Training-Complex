@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8">
+<html lang="en" class="bg-black"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gallery | BODYMAKERS</title>
 <script src="https://cdn.tailwindcss.com"></script>
@@ -57,7 +57,7 @@ overflow: hidden !important;
 }
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"></head>
-<body class="antialiased selection:bg-orange-900 selection:text-white scroll-smooth bg-black">
+<body class="antialiased selection:bg-orange-900 selection:text-white scroll-smooth bg-black opacity-0 transition-opacity duration-500 ease-in-out">
 
     <!-- Left Sidebar Contact Button -->
     <div class="fixed left-0 top-1/2 -translate-y-1/2 z-40 hidden lg:block">
@@ -71,7 +71,7 @@ overflow: hidden !important;
       <div class="flex max-w-7xl mr-auto ml-auto items-center justify-between">
         <!-- Navbar Logo -->
         <a href="index.html" class="block w-40 md:w-56">
-          <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/f5eb35ea-f505-4650-9c25-bb3a74eecb16_800w.jpg" alt="BodyMakers Logo" class="contrast-125 mix-blend-screen w-full h-auto object-contain grayscale invert cursor-pointer" onclick="window.location.href='index.html'" role="button">
+          <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/f5eb35ea-f505-4650-9c25-bb3a74eecb16_800w.jpg" alt="BodyMakers Logo" class="contrast-125 mix-blend-screen w-full h-auto object-contain grayscale invert cursor-pointer" role="button">
         </a>
 
         <!-- Desktop Menu -->
@@ -420,6 +420,11 @@ overflow: hidden !important;
         // Load saved language or default to English
         const savedLang = localStorage.getItem('bodymakers_lang') || 'en';
         setLanguage(savedLang);
+
+        // Page Transition Fade-In
+        setTimeout(() => {
+          document.body.classList.remove('opacity-0');
+        }, 50);
       });
 
       window.addEventListener('load', () => {
@@ -429,6 +434,7 @@ overflow: hidden !important;
       window.addEventListener('pageshow', (e) => {
         if (e.persisted) {
             forceTop();
+            document.body.classList.remove('opacity-0');
         }
       });
 
@@ -593,6 +599,40 @@ overflow: hidden !important;
                   if (e.key === 'ArrowLeft') window.prevImage();
               }
           });
+      });
+
+      // Page Transition Interceptor
+      document.addEventListener('click', (e) => {
+        const link = e.target.closest('a');
+        if (!link) return;
+
+        const href = link.getAttribute('href');
+        const target = link.getAttribute('target');
+
+        // Ignore modifier keys
+        if (e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+
+        // Ignore special links & missing hrefs
+        if (!href || target === '_blank' || href.startsWith('mailto:') || href.startsWith('tel:')) return;
+
+        // Handle path check for hashes
+        const currentUrl = window.location.origin + window.location.pathname;
+        const linkUrl = link.origin + link.pathname;
+        
+        // If it's a same-page anchor, let default behavior scroll
+        if (currentUrl === linkUrl && href.includes('#')) {
+          return; 
+        }
+
+        e.preventDefault();
+        
+        // Trigger fade out
+        document.body.classList.add('opacity-0');
+        
+        // Wait for the transition to finish before navigating
+        setTimeout(() => {
+          window.location.href = link.href;
+        }, 500); 
       });
     </script>
 
