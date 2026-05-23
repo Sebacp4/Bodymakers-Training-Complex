@@ -169,7 +169,7 @@ animation: heroFadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
 }
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"></head>
-<body class="antialiased selection:bg-orange-900 selection:text-white scroll-smooth bg-black opacity-0 transition-opacity duration-500 ease-in-out">
+<body class="antialiased selection:bg-orange-900 selection:text-white scroll-smooth bg-black transition-opacity duration-500 ease-in-out">
 
     <!-- Left Sidebar Contact Button -->
     <div class="fixed left-0 top-1/2 -translate-y-1/2 z-40 hidden lg:block">
@@ -199,7 +199,7 @@ animation: heroFadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
         <!-- Desktop Language Toggle & CTAs -->
         <div class="hidden md:flex items-center gap-6">
           <div class="flex items-center gap-2 text-xs font-semibold tracking-widest uppercase">
-            <button id="desktop-lang-en" class="text-white hover:text-orange-600 transition-colors lang-btn" data-lang="en">EN</button>
+            <button id="desktop-lang-en" class="hover:text-orange-600 transition-colors lang-btn text-white" data-lang="en">EN</button>
             <span class="text-neutral-700">/</span>
             <button id="desktop-lang-es" class="text-neutral-500 hover:text-orange-600 transition-colors lang-btn" data-lang="es">ES</button>
           </div>
@@ -221,7 +221,7 @@ animation: heroFadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
     <div id="mobile-menu" class="fixed inset-0 bg-black/95 z-[45] flex flex-col items-center justify-center opacity-0 pointer-events-none transition-all duration-500 md:hidden backdrop-blur-md">
       <div class="flex flex-col items-center gap-8 w-full px-6 translate-y-8 transition-transform duration-500" id="mobile-menu-content">
         <div class="flex items-center gap-4 text-sm font-semibold tracking-widest uppercase mb-2">
-          <button id="mobile-lang-en" class="text-white hover:text-orange-600 transition-colors lang-btn" data-lang="en">EN</button>
+          <button id="mobile-lang-en" class="hover:text-orange-600 transition-colors lang-btn text-white" data-lang="en">EN</button>
           <span class="text-neutral-700">/</span>
           <button id="mobile-lang-es" class="text-neutral-500 hover:text-orange-600 transition-colors lang-btn" data-lang="es">ES</button>
         </div>
@@ -244,9 +244,7 @@ animation: heroFadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
 
         <!-- Header Titles -->
         <div class="z-10 md:pt-48 text-center mb-16 pt-40 pr-6 pl-6 relative">
-            <h1 class="hero-animate md:text-8xl text-5xl font-normal text-transparent tracking-tight" style="-webkit-text-stroke: 1.5px #ea580c" data-translate-key="hero_title">
-                Other Services
-            </h1>
+            <h1 class="hero-animate md:text-8xl text-5xl font-normal text-transparent tracking-tight" style="-webkit-text-stroke: 1.5px #ea580c" data-translate-key="hero_title">Other Services</h1>
             <p class="hero-animate-delay text-neutral-500 text-xs md:text-sm tracking-widest uppercase mt-4 flex items-center justify-center gap-3">
                 <span class="w-6 h-px bg-orange-600/50"></span>
                 <span data-translate-key="hero_subtitle">Optimize Your Performance</span>
@@ -258,64 +256,54 @@ animation: heroFadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
         <div class="max-w-7xl mx-auto px-6 relative z-10">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <!-- Service 1: Barber Shop -->
-                <div class="group md:p-12 hover:bg-neutral-900/50 hover:border-orange-600/40 hover:shadow-[0_0_30px_rgba(234,88,12,0.08)] transition-all duration-500 reveal-on-scroll bg-neutral-900/20 border-white/5 border pt-8 pr-8 pb-8 pl-8" id="barber-shop">
+                <div class="group md:p-12 hover:bg-neutral-900/50 hover:border-orange-600/40 hover:shadow-[0_0_30px_rgba(234,88,12,0.08)] transition-all duration-500 reveal-on-scroll bg-neutral-900/20 border-white/5 border pt-8 pr-8 pb-8 pl-8 reveal-visible" id="barber-shop">
                     <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/b05633bd-f623-48ab-b92d-c7936460ecb9_320w.jpg" alt="Barber Studio Logo" class="h-16 w-auto object-contain mb-8 transition-transform duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_10px_rgba(234,88,12,0.5)] rounded-lg">
                     <h2 class="text-2xl md:text-3xl font-semibold text-white tracking-tight mb-4" data-translate-key="barber_title">Barber Shop</h2>
-                    <p class="text-neutral-400 text-sm leading-relaxed mb-8" data-translate-key="barber_desc">
-                        Professional cuts and grooming services available inside the gym.
-                    </p>
+                    <p class="text-neutral-400 text-sm leading-relaxed mb-8" data-translate-key="barber_desc">Professional cuts and grooming services available inside the gym.</p>
                     <a href="https://www.instagram.com/vm_barberstudio/" target="_blank" class="inline-flex items-center gap-2 uppercase group-hover:text-orange-600 transition-colors text-xs font-semibold text-white tracking-widest">
                         <span data-translate-key="btn_learn">Learn More</span> <iconify-icon icon="solar:arrow-right-linear" width="16" class=""></iconify-icon>
                     </a>
                 </div>
 
                 <!-- Service 2: Coffee Shop -->
-                <div id="coffee-shop" class="group border border-white/5 bg-neutral-900/20 p-8 md:p-12 hover:bg-neutral-900/50 hover:border-orange-600/40 hover:shadow-[0_0_30px_rgba(234,88,12,0.08)] transition-all duration-500 reveal-on-scroll">
+                <div id="coffee-shop" class="group border border-white/5 bg-neutral-900/20 p-8 md:p-12 hover:bg-neutral-900/50 hover:border-orange-600/40 hover:shadow-[0_0_30px_rgba(234,88,12,0.08)] transition-all duration-500 reveal-on-scroll reveal-visible">
                     <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/c6ac0029-0588-4beb-955d-485d245ba456_320w.jpg" alt="La Petite Coffee Shop Logo" class="h-16 w-auto object-contain mb-8 transition-transform duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_10px_rgba(234,88,12,0.5)] rounded-lg">
                     <h2 class="text-2xl md:text-3xl font-semibold text-white tracking-tight mb-4" data-translate-key="coffee_title">Coffee Shop</h2>
-                    <p class="text-neutral-400 text-sm leading-relaxed mb-8" data-translate-key="coffee_desc">
-                        Enjoy high-quality coffee and a relaxing atmosphere before or after your workout.
-                    </p>
+                    <p class="text-neutral-400 text-sm leading-relaxed mb-8" data-translate-key="coffee_desc">Enjoy high-quality coffee and a relaxing atmosphere before or after your workout.</p>
                     <a href="https://www.instagram.com/la.petite.coffee/" target="_blank" class="inline-flex items-center gap-2 uppercase group-hover:text-orange-600 transition-colors text-xs font-semibold text-white tracking-widest">
-                        <span data-translate-key="btn_ig">View Instagram</span> <iconify-icon icon="solar:arrow-right-linear" width="16" class=""></iconify-icon>
+                        <span data-translate-key="btn_ig" class="">View Instagram</span> <iconify-icon icon="solar:arrow-right-linear" width="16" class=""></iconify-icon>
                     </a>
                 </div>
 
                 <!-- Service 3: CrossFit -->
-                <div id="crossfit" class="group border border-white/5 bg-neutral-900/20 p-8 md:p-12 hover:bg-neutral-900/50 hover:border-orange-600/40 hover:shadow-[0_0_30px_rgba(234,88,12,0.08)] transition-all duration-500 reveal-on-scroll">
+                <div id="crossfit" class="group border border-white/5 bg-neutral-900/20 p-8 md:p-12 hover:bg-neutral-900/50 hover:border-orange-600/40 hover:shadow-[0_0_30px_rgba(234,88,12,0.08)] transition-all duration-500 reveal-on-scroll reveal-visible">
                     <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/c71a54d5-e622-4713-8477-ddd358e0fd9f_320w.jpg" alt="Jibaros Crossfit Logo" class="h-16 w-auto object-contain mb-8 transition-transform duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_10px_rgba(234,88,12,0.5)] rounded-lg">
                     <h2 class="text-2xl md:text-3xl font-semibold text-white tracking-tight mb-4" data-translate-key="crossfit_title">CrossFit</h2>
-                    <p class="text-neutral-400 text-sm leading-relaxed mb-8" data-translate-key="crossfit_desc">
-                        High-intensity functional training designed to push your limits and improve performance.
-                    </p>
+                    <p class="text-neutral-400 text-sm leading-relaxed mb-8" data-translate-key="crossfit_desc">High-intensity functional training designed to push your limits and improve performance.</p>
                     <a href="https://www.jibaroscrossfit.com/" target="_blank" class="inline-flex items-center gap-2 uppercase group-hover:text-orange-600 transition-colors text-xs font-semibold text-white tracking-widest">
-                        <span data-translate-key="btn_details">View Details</span> <iconify-icon icon="solar:arrow-right-linear" width="16" class=""></iconify-icon>
+                        <span data-translate-key="btn_details" class="">View Details</span> <iconify-icon icon="solar:arrow-right-linear" width="16" class=""></iconify-icon>
                     </a>
                 </div>
 
                 <!-- Service 4: Guayabera Event -->
-                <div id="guayabera-event" class="group border border-white/5 bg-neutral-900/20 p-8 md:p-12 hover:bg-neutral-900/50 hover:border-orange-600/40 hover:shadow-[0_0_30px_rgba(234,88,12,0.08)] transition-all duration-500 reveal-on-scroll">
+                <div id="guayabera-event" class="group border border-white/5 bg-neutral-900/20 p-8 md:p-12 hover:bg-neutral-900/50 hover:border-orange-600/40 hover:shadow-[0_0_30px_rgba(234,88,12,0.08)] transition-all duration-500 reveal-on-scroll reveal-visible">
                     <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/b48a9fe4-7254-4e0d-ae2d-9962dbf391a0_320w.jpg" alt="Guayabera Event Logo" class="h-16 w-auto object-contain mb-8 transition-transform duration-500 group-hover:scale-110 group-hover:drop-shadow-[0_0_10px_rgba(234,88,12,0.5)] rounded-lg">
                     <h2 class="md:text-3xl text-2xl font-semibold text-white tracking-tight mb-4" data-translate-key="event_title">Guayaera in Paradise 4</h2>
-                    <p class="text-neutral-400 text-sm leading-relaxed mb-8" data-translate-key="event_desc">
-                        A unique fitness event combining competition, community, and island energy. Coming soon.
-                    </p>
-                    <a href="https://circle21.events/guayaera-in-paradise" target="_blank" class="inline-flex items-center gap-2 uppercase group-hover:text-orange-600 transition-colors text-xs font-semibold text-white tracking-widest">
-                        <span data-translate-key="btn_event">See Event</span> <iconify-icon icon="solar:arrow-right-linear" width="16" class=""></iconify-icon>
+                    <p class="text-neutral-400 text-sm leading-relaxed mb-8" data-translate-key="event_desc">A unique fitness event combining competition, community, and island energy. Coming soon.</p>
+                    <a href="https://www.guayaera.com/" target="_blank" class="inline-flex items-center gap-2 uppercase group-hover:text-orange-600 transition-colors text-xs font-semibold text-white tracking-widest">
+                        <span data-translate-key="btn_event" class="">See Event</span> <iconify-icon icon="solar:arrow-right-linear" width="16" class="" height="16" style="color: rgb(234, 88, 12);"></iconify-icon>
                     </a>
                 </div>
             </div>
 
             <!-- Banner / CTA -->
-            <div class="mt-16 md:mt-24 border border-orange-900/30 bg-black p-8 md:p-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 reveal-on-scroll relative overflow-hidden group hover:border-orange-600/50 transition-colors duration-500">
+            <div class="mt-16 md:mt-24 border border-orange-900/30 bg-black p-8 md:p-16 flex flex-col md:flex-row items-start md:items-center justify-between gap-8 reveal-on-scroll relative overflow-hidden group hover:border-orange-600/50 transition-colors duration-500 reveal-visible">
                 <div class="absolute inset-0 laser-grid opacity-20"></div>
                 <div class="relative z-10 max-w-xl">
                     <h3 class="text-2xl md:text-4xl font-semibold text-white tracking-tight mb-4" data-translate-key="cta_title">Ready to elevate your training?</h3>
                     <p class="text-neutral-400 text-sm leading-relaxed" data-translate-key="cta_desc">Consult with our specialists to build a comprehensive plan that attacks your goals from every angle.</p>
                 </div>
-                <a href="https://wa.me/17879039363?text=Hola%2C%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20gimnasio%20y%20sus%20servicios.%20Gracias." target="_blank" rel="noopener noreferrer" class="relative z-10 flex shrink-0 gap-2 uppercase hover:bg-orange-600 hover:text-black transition-all duration-500 items-center text-xs font-semibold text-white tracking-widest border-orange-600 border pt-4 pr-8 pb-4 pl-8" data-translate-key="cta_btn">
-                    Contact Us Today
-                </a>
+                <a href="https://wa.me/17879039363?text=Hola%2C%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n%20sobre%20el%20gimnasio%20y%20sus%20servicios.%20Gracias." target="_blank" rel="noopener noreferrer" class="relative z-10 flex shrink-0 gap-2 uppercase hover:bg-orange-600 hover:text-black transition-all duration-500 items-center text-xs font-semibold text-white tracking-widest border-orange-600 border pt-4 pr-8 pb-4 pl-8" data-translate-key="cta_btn">Contact Us Today</a>
             </div>
         </div>
     </main>
@@ -330,10 +318,7 @@ animation: heroFadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
               <img src="https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/f5eb35ea-f505-4650-9c25-bb3a74eecb16_800w.jpg" alt="BodyMakers Logo" class="w-full h-auto object-contain invert grayscale contrast-125 mix-blend-screen">
             </a>
             
-            <p class="text-neutral-500 text-sm max-w-sm leading-relaxed reveal-on-scroll" data-translate-key="ft_desc">
-              An underground facility for those who refuse mediocrity. 
-              We exist in the shadows to ignite the light within you.
-            </p>
+            <p class="text-neutral-500 text-sm max-w-sm leading-relaxed reveal-on-scroll" data-translate-key="ft_desc">An underground facility for those who refuse mediocrity. We exist in the shadows to ignite the light within you.</p>
             <div class="flex gap-6 mt-8">
               <a href="https://www.instagram.com/bodymakerstrainingcomplex/" target="_blank" class="hover:text-orange-600 transition-colors text-neutral-600">
                 <iconify-icon icon="simple-icons:instagram" width="20" class="" height="20" style="color: rgb(234, 88, 12);"></iconify-icon>
@@ -345,9 +330,7 @@ animation: heroFadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
           </div>
 
           <div class="">
-            <h4 class="text-white text-xs font-semibold uppercase tracking-widest mb-6 text-orange-700" data-translate-key="ft_loc">
-              Location &amp; Hours
-            </h4>
+            <h4 class="text-white text-xs font-semibold uppercase tracking-widest mb-6 text-orange-700" data-translate-key="ft_loc">Location &amp; Hours</h4>
             <p class="leading-relaxed reveal-on-scroll text-sm text-neutral-500 mb-4">BodyMakers<br class="">San Isidro Industrial Park, Canóvanas PR</p>
             
             <ul class="space-y-2 text-xs text-neutral-500 font-mono reveal-on-scroll mb-4 border-l border-orange-900/30 pl-3">
@@ -360,9 +343,7 @@ animation: heroFadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
           </div>
 
           <div class="">
-            <h4 class="text-white text-xs font-semibold uppercase tracking-widest mb-6 text-orange-700" data-translate-key="ft_legal">
-              Legal
-            </h4>
+            <h4 class="text-white text-xs font-semibold uppercase tracking-widest mb-6 text-orange-700" data-translate-key="ft_legal">Legal</h4>
             <ul class="space-y-3 text-sm text-neutral-600 font-normal">
               <li class="">
                 <a href="#" class="hover:text-white transition-colors" data-translate-key="ft_imprint">Imprint</a>
@@ -378,14 +359,10 @@ animation: heroFadeInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
         </div>
 
         <div class="border-t border-neutral-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p class="text-neutral-800 text-xs uppercase tracking-widest reveal-on-scroll" data-translate-key="ft_rights">
-            © 2024 BodyMakers. All Rights Reserved.
-          </p>
+          <p class="text-neutral-800 text-xs uppercase tracking-widest reveal-on-scroll" data-translate-key="ft_rights">© 2024 BodyMakers. All Rights Reserved.</p>
           <div class="flex items-center gap-3">
             <div class="w-1.5 h-1.5 rounded-full bg-orange-600 animate-pulse shadow-[0_0_10px_orange]"></div>
-            <span class="text-neutral-600 text-xs font-mono tracking-widest" data-translate-key="ft_status">
-              SYSTEM STATUS: ONLINE
-            </span>
+            <span class="text-neutral-600 text-xs font-mono tracking-widest" data-translate-key="ft_status">SYSTEM STATUS: ONLINE</span>
           </div>
         </div>
       </div>
