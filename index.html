@@ -225,7 +225,33 @@ transform: rotateY(180deg);
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
 <meta name="description" content="BodyMakers Training Complex: An elite underground fitness sanctuary in Canóvanas, PR. Advanced biometrics, performance training, and real transformations.">
-<link rel="canonical" href="https://www.bodymakerstc.com/"></head>
+<link rel="canonical" href="https://www.bodymakerstc.com/">
+<script>document.addEventListener('click', event => {
+const anchor = event.target.closest?.('a[href]');
+const href = anchor?.getAttribute('href');
+if (event.defaultPrevented || !href?.startsWith('#')) return;
+event.preventDefault();
+if (href === '#') { window.scrollTo({top: 0, behavior: 'smooth'}); return; }
+try {
+const id = decodeURIComponent(href.slice(1));
+const target = document.getElementById(id) || document.getElementsByName(id)[0];
+target?.scrollIntoView({behavior: 'smooth', block: 'start'});
+} catch { /* Invalid fragments remain in the saved document. */ }
+});</script>
+<script>document.addEventListener('click', event => {
+if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+const anchor = event.target.closest?.('a[href]');
+if (!anchor || anchor.hasAttribute('download')) return;
+const target = anchor.getAttribute('target')?.toLowerCase();
+if (target && target !== '_self' && target !== '_top') return;
+try {
+const destination = new URL(anchor.href, document.baseURI);
+const base = new URL(document.baseURI);
+if (!['http:', 'https:'].includes(destination.protocol) || destination.origin === base.origin) return;
+event.preventDefault();
+window.open(destination.href, '_blank', 'noopener,noreferrer');
+} catch { /* Leave invalid links to the browser. */ }
+}, true);</script></head>
   <body class="antialiased selection:bg-orange-900 selection:text-white bg-black page-fade-in">
     <!-- Left Sidebar Contact Button -->
     <div class="fixed left-0 top-1/2 -translate-y-1/2 z-50 hidden lg:block">
@@ -262,7 +288,7 @@ transform: rotateY(180deg);
         <!-- CTAs & Tools -->
         <div class="hidden md:flex items-center gap-6 reveal-on-scroll reveal-visible">
           <!-- Language Toggle (Desktop) -->
-          <button onclick="toggleLanguage()" class="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer text-sm font-medium tracking-widest uppercase">
+          <button class="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer text-sm font-medium tracking-widest uppercase" onclick="toggleLanguage()">
             <span class="lang-btn-en text-white transition-colors">EN</span>
             <span class="text-neutral-600 font-normal">/</span>
             <span class="lang-btn-es text-neutral-500 hover:text-white transition-colors">
@@ -281,7 +307,7 @@ transform: rotateY(180deg);
         <!-- Mobile Menu Toggle & Lang -->
         <div class="md:hidden flex items-center gap-5 z-50 relative p-2 -mr-2">
           <!-- Language Toggle (Mobile) -->
-          <button onclick="toggleLanguage()" class="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer text-sm font-medium tracking-widest uppercase">
+          <button class="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer text-sm font-medium tracking-widest uppercase" onclick="toggleLanguage()">
             <span class="lang-btn-en text-white transition-colors">EN</span>
             <span class="text-neutral-600 font-normal">/</span>
             <span class="lang-btn-es text-neutral-500 hover:text-white transition-colors">
@@ -712,9 +738,7 @@ transform: rotateY(180deg);
               </li>
               <li class="flex justify-between items-end border-b border-white/5 pb-4">
                 <span class="text-white uppercase tracking-wide">Friday</span>
-                <span class="text-neutral-400 font-mono">
-                  5:00 AM – 9:00 PM
-                </span>
+                <span class="text-neutral-400 font-mono">5:00 AM – 8:00 PM</span>
               </li>
               <li class="flex justify-between items-end border-b border-white/5 pb-4">
                 <span class="text-white uppercase tracking-wide">Saturday</span>
@@ -1507,7 +1531,10 @@ transform: rotateY(180deg);
       </div>
     </footer>
 
-    <script>
+    
+  
+
+<script>
       // Clear scroll position on navigation events inside script for additional safety
       window.addEventListener('beforeunload', function () {
           window.scrollTo(0, 0);
@@ -1854,6 +1881,4 @@ transform: rotateY(180deg);
               document.body.classList.remove('page-fade-out');
           }
       });
-    </script>
-  
-</body></html>
+    </script></body></html>
