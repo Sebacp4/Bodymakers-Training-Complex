@@ -410,6 +410,207 @@ window.open(destination.href, '_blank', 'noopener,noreferrer');
         <div class="w-px h-16 bg-gradient-to-b from-transparent via-orange-600 to-transparent animate-pulse"></div>
       </div>
     </header>
+    <div id="offer-strip" class="relative z-20 w-full bg-black border-b border-orange-600/40 overflow-hidden">
+      <div class="so-line absolute top-0 inset-x-0 h-px"></div>
+      <div class="max-w-7xl mx-auto px-6 py-3 flex flex-col md:flex-row items-center justify-center gap-3 md:gap-8 text-center">
+        <div class="flex items-center gap-3 text-white text-[11px] md:text-xs font-semibold tracking-widest uppercase">
+          <span class="relative flex h-2 w-2 shrink-0">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-600 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-orange-600"></span>
+          </span>
+          <span>
+            EXCLUSIVE OFFER — FIRST &amp; LAST MONTH FREE — ONLY 15 SPOTS
+          </span>
+        </div>
+        <a href="#special-offer" class="group inline-flex items-center gap-2 text-orange-500 text-[11px] md:text-xs font-semibold tracking-widest uppercase border border-orange-600/40 px-5 py-2 hover:bg-orange-600 hover:text-black hover:border-orange-600 transition-all duration-500 whitespace-nowrap">
+          <span>VIEW OFFER</span>
+          <iconify-icon icon="lucide:arrow-down" class="group-hover:translate-y-0.5 transition-transform" width="14"></iconify-icon>
+        </a>
+      </div>
+    </div>
+    <section id="special-offer" class="relative overflow-hidden bg-black border-t border-neutral-900 pt-24 pb-24 md:pt-32 md:pb-32">
+      <style>
+        html{scroll-behavior:smooth}#special-offer .so-word{display:inline-block;opacity:0;transform:translateY(110%);transition:transform 1.1s cubic-bezier(.16,1,.3,1),opacity .9s ease}#special-offer .reveal-visible .so-word{opacity:1;transform:translateY(0)}#special-offer .so-price{text-shadow:0 0 24px rgba(234,88,12,.45),0 0 60px rgba(234,88,12,.2);animation:soGlow 4s ease-in-out infinite}@keyframes soGlow{0%,100%{text-shadow:0 0 24px rgba(234,88,12,.45),0 0 60px rgba(234,88,12,.2)}50%{text-shadow:0 0 36px rgba(234,88,12,.7),0 0 90px rgba(234,88,12,.3)}}.so-line{background:linear-gradient(90deg,transparent,#ea580c,transparent);background-size:200% 100%;animation:soSweep 5s linear infinite}@keyframes soSweep{0%{background-position:200% 0}100%{background-position:-200% 0}}@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}#special-offer .so-word{opacity:1;transform:none;transition:none}#special-offer .so-price,.so-line,#offer-strip .animate-ping{animation:none}}
+      </style>
+      <div class="absolute inset-0 laser-grid opacity-10 pointer-events-none"></div>
+      <div class="absolute -top-40 -left-40 w-[600px] h-[600px] rounded-full bg-orange-600/10 blur-[140px] pointer-events-none"></div>
+      <div class="absolute -bottom-40 right-0 w-[500px] h-[500px] rounded-full bg-orange-900/10 blur-[140px] pointer-events-none"></div>
+      <div class="max-w-7xl mx-auto px-6 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-14 lg:gap-10 items-center">
+          <div class="lg:col-span-7 reveal-on-scroll">
+            <span class="inline-flex items-center gap-3 text-orange-600 text-xs font-semibold tracking-widest uppercase mb-8">
+              <span class="w-6 h-px bg-orange-600"></span>
+              <span>EXCLUSIVE MEMBERSHIP OFFER</span>
+            </span>
+            <h2 class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-semibold tracking-tight leading-[0.95] text-white uppercase mb-8">
+              <span class="block overflow-hidden pb-1">
+                <span class="so-word" style="transition-delay:.1s">
+                  YOUR FIRST &amp; LAST MONTH.
+                </span>
+              </span>
+              <span class="block overflow-hidden pb-2">
+                <span class="so-word text-orange-600 glow-text" style="transition-delay:.3s">
+                  ON US.
+                </span>
+              </span>
+            </h2>
+            <p class="text-sm md:text-lg text-neutral-400 max-w-lg leading-relaxed border-l-2 border-orange-700 pl-6 mb-10 reveal-on-scroll" style="transition-delay:.15s">
+              Start strong. Finish stronger. Get your FIRST and LAST month FREE
+              with our exclusive 6-month membership offer.
+            </p>
+            <div class="flex items-end gap-4 mb-10 reveal-on-scroll" style="transition-delay:.25s">
+              <span class="so-price text-6xl md:text-7xl font-semibold text-white tracking-tight leading-none">
+                $27.99
+              </span>
+              <div class="flex flex-col gap-1 pb-1">
+                <span class="text-orange-500 text-sm md:text-base font-semibold tracking-widest uppercase">
+                  / MONTH
+                </span>
+                <span class="text-neutral-500 text-[10px] tracking-widest uppercase">
+                  PROMOTIONAL RATE
+                </span>
+              </div>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4 reveal-on-scroll" style="transition-delay:.35s">
+              <a href="tel:7879572000" class="group inline-flex items-center justify-center gap-3 bg-orange-600 text-black text-xs font-semibold tracking-widest uppercase px-10 py-5 hover:bg-white transition-all duration-500 shadow-[0_0_30px_rgba(234,88,12,0.35)] hover:shadow-[0_0_45px_rgba(234,88,12,0.5)]">
+                <iconify-icon icon="lucide:phone" width="16"></iconify-icon>
+                <span>CLAIM YOUR SPOT</span>
+              </a>
+              <a data-offer-wa="" href="https://wa.me/17879039363?text=Hello%21%20I%27m%20interested%20in%20the%20Bodymakers%20membership%20promotion%20for%20%2427.99%20per%20month%2C%20with%20the%20first%20and%20last%20months%20free%2C%20a%20free%20InBody%20evaluation%2C%20and%20a%206-month%20agreement.%20I%20would%20like%20more%20information." target="_blank" rel="noopener noreferrer" class="group inline-flex items-center justify-center gap-3 border border-white/15 text-white text-xs font-semibold tracking-widest uppercase px-10 py-5 hover:border-orange-600 hover:text-orange-500 transition-all duration-500">
+                <iconify-icon icon="lucide:message-circle" width="16"></iconify-icon>
+                <span>ASK ABOUT THIS OFFER</span>
+              </a>
+            </div>
+          </div>
+          <div class="lg:col-span-5 relative reveal-on-scroll" style="transition-delay:.2s">
+            <div class="absolute -inset-8 bg-[radial-gradient(circle_at_center,_rgba(234,88,12,0.18),_transparent_65%)] blur-2xl pointer-events-none"></div>
+            <div class="relative bg-neutral-950 border border-white/10 overflow-hidden">
+              <div class="absolute inset-0 bg-[url(https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1600&amp;q=80)] bg-cover bg-center grayscale opacity-20"></div>
+              <div class="absolute inset-0 bg-gradient-to-b from-black/30 via-neutral-950/85 to-neutral-950"></div>
+              <div class="so-line absolute top-0 inset-x-0 h-px"></div>
+              <div class="absolute top-6 right-6 text-stroke text-6xl md:text-7xl font-semibold tracking-tight select-none pointer-events-none">
+                x2
+              </div>
+              <div class="relative p-8 md:p-10">
+                <div class="flex items-center justify-between mb-12">
+                  <span class="text-[10px] font-mono text-orange-500 tracking-widest uppercase">
+                    BODYMAKERS // MEMBERSHIP
+                  </span>
+                  <span class="inline-flex items-center gap-2 text-[10px] text-neutral-400 tracking-widest uppercase">
+                    <span class="w-1.5 h-1.5 rounded-full bg-orange-600 animate-pulse"></span>
+                    <span>LIMITED</span>
+                  </span>
+                </div>
+                <div class="mb-10">
+                  <span class="block text-4xl md:text-5xl font-semibold text-white tracking-tight leading-none">
+                    2 MONTHS FREE
+                  </span>
+                  <span class="mt-4 inline-flex items-center gap-3 text-orange-500 text-xs font-semibold tracking-widest uppercase">
+                    <span class="w-6 h-px bg-orange-600"></span>
+                    <span>FIRST + LAST MONTH</span>
+                  </span>
+                </div>
+                <ul class="border-t border-white/10 divide-y divide-white/10">
+                  <li class="group flex items-center gap-4 py-5">
+                    <span class="w-10 h-10 shrink-0 inline-flex items-center justify-center border border-orange-900/50 bg-black text-orange-500 group-hover:border-orange-600 group-hover:shadow-[0_0_15px_rgba(234,88,12,0.3)] transition-all duration-500">
+                      <iconify-icon icon="lucide:users" width="18"></iconify-icon>
+                    </span>
+                    <span class="flex-1 text-white text-sm font-semibold tracking-widest uppercase">
+                      ONLY 15 SPOTS AVAILABLE
+                    </span>
+                    <span class="text-neutral-700 font-mono text-xs">01</span>
+                  </li>
+                  <li class="group flex items-center gap-4 py-5">
+                    <span class="w-10 h-10 shrink-0 inline-flex items-center justify-center border border-orange-900/50 bg-black text-orange-500 group-hover:border-orange-600 group-hover:shadow-[0_0_15px_rgba(234,88,12,0.3)] transition-all duration-500">
+                      <iconify-icon icon="lucide:scan-line" width="18"></iconify-icon>
+                    </span>
+                    <span class="flex-1 text-white text-sm font-semibold tracking-widest uppercase">
+                      FREE INBODY EVALUATION
+                    </span>
+                    <span class="text-neutral-700 font-mono text-xs">02</span>
+                  </li>
+                  <li class="group flex items-center gap-4 py-5">
+                    <span class="w-10 h-10 shrink-0 inline-flex items-center justify-center border border-orange-900/50 bg-black text-orange-500 group-hover:border-orange-600 group-hover:shadow-[0_0_15px_rgba(234,88,12,0.3)] transition-all duration-500">
+                      <iconify-icon icon="lucide:file-check" width="18"></iconify-icon>
+                    </span>
+                    <span class="flex-1 text-white text-sm font-semibold tracking-widest uppercase">
+                      6-MONTH AGREEMENT
+                    </span>
+                    <span class="text-neutral-700 font-mono text-xs">03</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-16 md:mt-24 reveal-on-scroll">
+          <div class="flex items-center gap-4 mb-8">
+            <span class="text-orange-600 text-xs font-semibold tracking-widest uppercase whitespace-nowrap">
+              WHAT'S INCLUDED
+            </span>
+            <span class="so-line h-px flex-1"></span>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-px bg-white/5 border border-white/5">
+            <div class="bg-black p-6 hover:bg-orange-950/20 transition-colors duration-500">
+              <span class="text-neutral-700 font-mono text-[10px]">01</span>
+              <h3 class="mt-4 text-white text-sm font-semibold tracking-widest uppercase">
+                FIRST &amp; LAST MONTH FREE
+              </h3>
+              <p class="mt-2 text-neutral-500 text-xs leading-relaxed">
+                A six-month membership where your first and last months are
+                free.
+              </p>
+            </div>
+            <div class="bg-black p-6 hover:bg-orange-950/20 transition-colors duration-500 border-l-2 border-orange-600">
+              <span class="text-orange-600 font-mono text-[10px]">02</span>
+              <h3 class="mt-4 text-orange-500 text-sm font-semibold tracking-widest uppercase">
+                ONLY 15 SPOTS AVAILABLE
+              </h3>
+              <p class="mt-2 text-neutral-500 text-xs leading-relaxed">
+                Limited availability for this exclusive membership offer.
+              </p>
+            </div>
+            <div class="bg-black p-6 hover:bg-orange-950/20 transition-colors duration-500">
+              <span class="text-neutral-700 font-mono text-[10px]">03</span>
+              <h3 class="mt-4 text-white text-sm font-semibold tracking-widest uppercase">
+                FREE INBODY EVALUATION
+              </h3>
+              <p class="mt-2 text-neutral-500 text-xs leading-relaxed">
+                Includes a complimentary InBody body composition evaluation.
+              </p>
+            </div>
+            <div class="bg-black p-6 hover:bg-orange-950/20 transition-colors duration-500">
+              <span class="text-neutral-700 font-mono text-[10px]">04</span>
+              <h3 class="mt-4 text-white text-sm font-semibold tracking-widest uppercase glow-text">
+                $27.99 / MONTH
+              </h3>
+              <p class="mt-2 text-neutral-500 text-xs leading-relaxed">
+                Promotional monthly membership rate.
+              </p>
+            </div>
+            <div class="bg-black p-6 hover:bg-orange-950/20 transition-colors duration-500">
+              <span class="text-neutral-700 font-mono text-[10px]">05</span>
+              <h3 class="mt-4 text-white text-sm font-semibold tracking-widest uppercase">
+                6-MONTH AGREEMENT
+              </h3>
+              <p class="mt-2 text-neutral-500 text-xs leading-relaxed">
+                A 6-month membership agreement is required.
+              </p>
+            </div>
+          </div>
+          <div class="mt-10 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs text-neutral-500 tracking-widest uppercase">
+            <span class="inline-flex items-center gap-2">
+              <iconify-icon icon="lucide:map-pin" class="text-orange-600" width="14"></iconify-icon>
+              <span>Canóvanas, Puerto Rico</span>
+            </span>
+            <a href="tel:7879572000" class="inline-flex items-center gap-2 hover:text-orange-500 transition-colors">
+              <iconify-icon icon="lucide:phone" class="text-orange-600" width="14"></iconify-icon>
+              <span>787-957-2000</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Philosophy Section -->
     <div class="bg-orange-600/10 border-y border-orange-600/30 py-4 px-6 relative z-20 w-full backdrop-blur-sm">
@@ -738,7 +939,9 @@ window.open(destination.href, '_blank', 'noopener,noreferrer');
               </li>
               <li class="flex justify-between items-end border-b border-white/5 pb-4">
                 <span class="text-white uppercase tracking-wide">Friday</span>
-                <span class="text-neutral-400 font-mono">5:00 AM – 8:00 PM</span>
+                <span class="text-neutral-400 font-mono">
+                  5:00 AM – 8:00 PM
+                </span>
               </li>
               <li class="flex justify-between items-end border-b border-white/5 pb-4">
                 <span class="text-white uppercase tracking-wide">Saturday</span>
@@ -1531,10 +1734,7 @@ window.open(destination.href, '_blank', 'noopener,noreferrer');
       </div>
     </footer>
 
-    
-  
-
-<script>
+    <script>
       // Clear scroll position on navigation events inside script for additional safety
       window.addEventListener('beforeunload', function () {
           window.scrollTo(0, 0);
@@ -1881,4 +2081,9 @@ window.open(destination.href, '_blank', 'noopener,noreferrer');
               document.body.classList.remove('page-fade-out');
           }
       });
-    </script></body></html>
+    </script>
+    <script>
+      (function(){if(typeof langTranslations==='undefined')return;Object.assign(langTranslations,{"EXCLUSIVE OFFER — FIRST & LAST MONTH FREE — ONLY 15 SPOTS":"OFERTA EXCLUSIVA — PRIMER Y ÚLTIMO MES GRATIS — SOLO 15 ESPACIOS","VIEW OFFER":"VER OFERTA","EXCLUSIVE MEMBERSHIP OFFER":"OFERTA EXCLUSIVA DE MEMBRESÍA","YOUR FIRST & LAST MONTH.":"TU PRIMER Y ÚLTIMO MES.","ON US.":"¡GRATIS!","Start strong. Finish stronger. Get your FIRST and LAST month FREE with our exclusive 6-month membership offer.":"Comienza con fuerza y termina aún más fuerte. Recibe tu PRIMER y ÚLTIMO mes GRATIS con nuestra oferta exclusiva de membresía de 6 meses.","/ MONTH":"/ MES","PROMOTIONAL RATE":"TARIFA PROMOCIONAL","CLAIM YOUR SPOT":"APROVECHA ESTA OFERTA","ASK ABOUT THIS OFFER":"PREGUNTA POR LA PROMOCIÓN","BODYMAKERS // MEMBERSHIP":"BODYMAKERS // MEMBRESÍA","LIMITED":"LIMITADO","2 MONTHS FREE":"2 MESES GRATIS","FIRST + LAST MONTH":"PRIMER + ÚLTIMO MES","ONLY 15 SPOTS AVAILABLE":"SOLO 15 ESPACIOS DISPONIBLES","FREE INBODY EVALUATION":"EVALUACIÓN INBODY GRATIS","6-MONTH AGREEMENT":"ACUERDO DE 6 MESES","WHAT'S INCLUDED":"QUÉ INCLUYE","FIRST & LAST MONTH FREE":"PRIMER Y ÚLTIMO MES GRATIS","A six-month membership where your first and last months are free.":"Una membresía de 6 meses donde tu primer y último mes son gratis.","Limited availability for this exclusive membership offer.":"Disponibilidad limitada para esta oferta exclusiva de membresía.","Includes a complimentary InBody body composition evaluation.":"Incluye una evaluación de composición corporal InBody gratis.","$27.99 / MONTH":"$27.99 / MES","Promotional monthly membership rate.":"Tarifa mensual promocional de membresía.","A 6-month membership agreement is required.":"Se requiere un acuerdo de membresía de 6 meses."});var waEn="https://wa.me/17879039363?text=Hello%21%20I%27m%20interested%20in%20the%20Bodymakers%20membership%20promotion%20for%20%2427.99%20per%20month%2C%20with%20the%20first%20and%20last%20months%20free%2C%20a%20free%20InBody%20evaluation%2C%20and%20a%206-month%20agreement.%20I%20would%20like%20more%20information.";var waEs="https://wa.me/17879039363?text=%C2%A1Hola%21%20Me%20interesa%20la%20promoci%C3%B3n%20de%20Bodymakers%20de%20%2427.99%20mensuales%2C%20con%20el%20primer%20y%20%C3%BAltimo%20mes%20gratis%2C%20evaluaci%C3%B3n%20InBody%20gratis%20y%20acuerdo%20de%206%20meses.%20Quisiera%20recibir%20m%C3%A1s%20informaci%C3%B3n.";var orig=window.toggleLanguage;if(typeof orig==='function'){window.toggleLanguage=function(){orig();var es=(typeof currentLang!=='undefined'&&currentLang==='ES');document.querySelectorAll('[data-offer-wa]').forEach(function(a){a.setAttribute('href',es?waEs:waEn);});};}})();
+    </script>
+  
+</body></html>
